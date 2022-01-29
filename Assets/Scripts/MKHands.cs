@@ -253,7 +253,7 @@ public class MKHands : MonoBehaviour
             main.bananas -= Hands[x].cost;
             totalBPC += Hands[x].productionPerClick;
             Hands[x].count += 1;
-            Hands[x].cost = OriginalHandsCost[x] * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count) / (5000))), Hands[x].count));
+            Hands[x].cost = Hands[x].cost * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count) / (5000))), Hands[x].count));
 
             Hands[x].productionPerClick = miles.milesStoness(Hands[x].count, Hands[x].productionPerClick);
         }
@@ -264,7 +264,7 @@ public class MKHands : MonoBehaviour
         double temp1;
 
         for (int i = 0;i <= 9; i++){
-            temp1 = OriginalHandsCost[x] * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count + i) / (5000))), Hands[x].count + i));
+            temp1 = Hands[x].cost * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count + i) / (5000))), Hands[x].count + i));
             temp +=temp1;
         }
         
@@ -276,7 +276,7 @@ public class MKHands : MonoBehaviour
                 main.bananas -= Hands[x].cost;
                 totalBPC += Hands[x].productionPerClick;
                 Hands[x].count += 1;
-                Hands[x].cost = OriginalHandsCost[x] * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count) / (5000))), Hands[x].count));
+                Hands[x].cost = Hands[x].cost * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count) / (5000))), Hands[x].count));
                 Hands[x].productionPerClick = miles.milesStoness(Hands[x].count, Hands[x].productionPerClick);
                 
             }
@@ -290,7 +290,7 @@ public class MKHands : MonoBehaviour
         double temp1;
 
         for (int i = 0;i <= 99; i++){
-            temp1 = OriginalHandsCost[x] * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count + i) / (5000))), Hands[x].count + i));
+            temp1 = Hands[x].cost * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count + i) / (5000))), Hands[x].count + i));
             temp +=temp1;
         }
         
@@ -302,7 +302,7 @@ public class MKHands : MonoBehaviour
                 main.bananas -= Hands[x].cost;
                 totalBPC += Hands[x].productionPerClick;
                 Hands[x].count += 1;
-                Hands[x].cost = OriginalHandsCost[x] * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count) / (5000))), Hands[x].count));
+                Hands[x].cost = Hands[x].cost * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count) / (5000))), Hands[x].count));
                 Hands[x].productionPerClick = miles.milesStoness(Hands[x].count, Hands[x].productionPerClick);
             }
         }

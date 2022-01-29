@@ -209,7 +209,7 @@ public class MKMonkis : MonoBehaviour
             main.bananas -= monkis[x].cost;
             totalBPS += monkis[x].productionPerClick;
             monkis[x].count += 1;
-            monkis[x].cost = OriginalMonkisCost[x] * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count) / (5000))), monkis[x].count));
+            monkis[x].cost = monkis[x].cost * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count) / (5000))), monkis[x].count));
 
             monkis[x].productionPerClick = miles.milesStoness(monkis[x].count, monkis[x].productionPerClick);
         }
@@ -220,7 +220,7 @@ public class MKMonkis : MonoBehaviour
         double temp1;
 
         for (int i = 0;i <= 9; i++){
-            temp1 = OriginalMonkisCost[x] * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count + i) / (5000))), monkis[x].count + i));
+            temp1 = monkis[x].cost * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count + i) / (5000))), monkis[x].count + i));
             temp +=temp1;
         }
         
@@ -232,7 +232,7 @@ public class MKMonkis : MonoBehaviour
                 main.bananas -= monkis[x].cost;
                 totalBPS += monkis[x].productionPerClick;
                 monkis[x].count += 1;
-                monkis[x].cost = OriginalMonkisCost[x] * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count) / (5000))), monkis[x].count));
+                monkis[x].cost = monkis[x].cost * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count) / (5000))), monkis[x].count));
                 monkis[x].productionPerClick = miles.milesStoness(monkis[x].count, monkis[x].productionPerClick);
             }
         }
@@ -245,7 +245,7 @@ public class MKMonkis : MonoBehaviour
         double temp1;
 
         for (int i = 0;i <= 99; i++){
-            temp1 = OriginalMonkisCost[x] * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count + i) / (5000))), monkis[x].count + i));
+            temp1 = monkis[x].cost * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count + i) / (5000))), monkis[x].count + i));
             temp +=temp1;
         }
         
@@ -257,7 +257,7 @@ public class MKMonkis : MonoBehaviour
                 main.bananas -= monkis[x].cost;
                 totalBPS += monkis[x].productionPerClick;
                 monkis[x].count += 1;
-                monkis[x].cost = OriginalMonkisCost[x] * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count) / (5000))), monkis[x].count));
+                monkis[x].cost = monkis[x].cost * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count) / (5000))), monkis[x].count));
                 monkis[x].productionPerClick = miles.milesStoness(monkis[x].count, monkis[x].productionPerClick);
             }
         }

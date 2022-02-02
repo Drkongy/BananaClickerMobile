@@ -48,6 +48,27 @@ public class AmountsLoop : MonoBehaviour
         }
     }
 
+
+
+    public void BUUpdate(){
+        if (CycleNo == 1)
+        {
+            txtXone();
+            Debug.Log("test one");
+
+        }else if(CycleNo == 2){
+            txtXten();
+            Debug.Log("test two");
+
+        }else if(CycleNo == 3){
+            txtXhundred();
+            Debug.Log("test three");
+        }
+        
+
+
+    }
+
     public void btnAmount(){
         if(CycleNo == 0){ // this is for 1x
             txtLoop("1x");
@@ -105,11 +126,11 @@ public class AmountsLoop : MonoBehaviour
             for (int i = 0;i <= 9; i++){
                 //hands
                 temp2 += Hand.Hands[x].productionPerClick;
-                temp1 = Hand.OriginalHandsCost[x] * (Math.Pow((1 + (Hand.Hands[x].costMultiplier) / (1 + (Hand.Hands[x].count + i) / (5000))), Hand.Hands[x].count + i));
+                temp1 = Hand.Hands[x].initialCost * (Math.Pow((1 + (Hand.Hands[x].costMultiplier) / (1 + (Hand.Hands[x].count + i) / (5000))), Hand.Hands[x].count + i));
                 temp +=temp1;
                 //monkis
                 mTemp2 += Monki.monkis[x].productionPerClick;
-                mTemp1 = Monki.OriginalMonkisCost[x] * (Math.Pow((1 + (Monki.monkis[x].costMultiplier) / (1 + (Monki.monkis[x].count + i) / (5000))), Monki.monkis[x].count + i));
+                mTemp1 = Monki.monkis[x].initialCost * (Math.Pow((1 + (Monki.monkis[x].costMultiplier) / (1 + (Monki.monkis[x].count + i) / (5000))), Monki.monkis[x].count + i));
                 mTemp += mTemp1;
 
 
@@ -150,11 +171,11 @@ public class AmountsLoop : MonoBehaviour
             for (int i = 0;i <= 99; i++){
                 //hands
                 temp2 += Hand.Hands[x].productionPerClick;
-                temp1 = Hand.OriginalHandsCost[x] * (Math.Pow((1 + (Hand.Hands[x].costMultiplier) / (1 + (Hand.Hands[x].count + i) / (5000))), Hand.Hands[x].count + i));
+                temp1 = Hand.Hands[x].initialCost * (Math.Pow((1 + (Hand.Hands[x].costMultiplier) / (1 + (Hand.Hands[x].count + i) / (5000))), Hand.Hands[x].count + i));
                 temp +=temp1;
                 //monkis
                 mTemp2 += Monki.monkis[x].productionPerClick;
-                mTemp1 = Monki.OriginalMonkisCost[x] * (Math.Pow((1 + (Monki.monkis[x].costMultiplier) / (1 + (Monki.monkis[x].count + i) / (5000))), Monki.monkis[x].count + i));
+                mTemp1 = Monki.monkis[x].initialCost * (Math.Pow((1 + (Monki.monkis[x].costMultiplier) / (1 + (Monki.monkis[x].count + i) / (5000))), Monki.monkis[x].count + i));
                 mTemp += mTemp1;
 
 

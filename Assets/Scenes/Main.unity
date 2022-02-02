@@ -7501,6 +7501,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 842615896}
+        m_TargetAssemblyTypeName: AmountsLoop, Assembly-CSharp
+        m_MethodName: BUUpdate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &542430904
 GameObject:
   m_ObjectHideFlags: 0
@@ -11709,6 +11721,7 @@ MonoBehaviour:
   Hand: {fileID: 842615890}
   Monki: {fileID: 842615894}
   IA: {fileID: 842615897}
+  BananaUpgr: {fileID: 842615898}
 --- !u!114 &842615896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11783,6 +11796,7 @@ MonoBehaviour:
   Hand: {fileID: 842615890}
   Monki: {fileID: 842615894}
   prefix: {fileID: 842615887}
+  AL: {fileID: 842615896}
   UpgradeNo: 0000000000000000000000000000000000000000
   ArrBounds: 12
   txtUpgrade:
@@ -14463,6 +14477,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 842615896}
+        m_TargetAssemblyTypeName: AmountsLoop, Assembly-CSharp
+        m_MethodName: BUUpdate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1062454550
 GameObject:
   m_ObjectHideFlags: 0
@@ -15772,6 +15798,18 @@ MonoBehaviour:
       - m_Target: {fileID: 842615898}
         m_TargetAssemblyTypeName: BananaUpgrades, Assembly-CSharp
         m_MethodName: btnUpgrHands
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 842615896}
+        m_TargetAssemblyTypeName: AmountsLoop, Assembly-CSharp
+        m_MethodName: BUUpdate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23302,6 +23340,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 842615896}
+        m_TargetAssemblyTypeName: AmountsLoop, Assembly-CSharp
+        m_MethodName: BUUpdate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1426284132
 GameObject:
   m_ObjectHideFlags: 0
@@ -30171,6 +30221,18 @@ MonoBehaviour:
       - m_Target: {fileID: 842615898}
         m_TargetAssemblyTypeName: BananaUpgrades, Assembly-CSharp
         m_MethodName: btnUpgrMonkis
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 842615896}
+        m_TargetAssemblyTypeName: AmountsLoop, Assembly-CSharp
+        m_MethodName: BUUpdate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

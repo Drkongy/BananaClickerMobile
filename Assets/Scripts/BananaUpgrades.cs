@@ -11,6 +11,7 @@ public class BananaUpgrades : MonoBehaviour
     public MKHands Hand;    // links the MKHands script to this file.
     public MKMonkis Monki;  // links to the MKMonkis script.
     public BananaPrefix prefix;  //Links the Prefix script to this
+    public AmountsLoop AL;   // for the amount multiples
 
 
 
@@ -30,10 +31,6 @@ public class BananaUpgrades : MonoBehaviour
     {
 
         txtUpdate();
-
-
-
-
     }
 
     // Update is called once per frame
@@ -58,6 +55,13 @@ public class BananaUpgrades : MonoBehaviour
         txtUpgradeCost[2].text = "Cost: " + prefix.Suffix(getHandDeductionCost(UpgradeNo[2]), "0.0", false) + " Bananas";
         txtUpgradeCost[3].text = "Cost: " + prefix.Suffix(getMonkiDeductionCost(UpgradeNo[3]), "0.0", false) + " Bananas";
         txtUpgradeCost[4].text = "Cost: " + prefix.Suffix(getAllCost(UpgradeNo[4]), "0.0", false) + " Bananas";
+        
+
+
+        // for the shops
+        
+        //AL.BUUpdate(); do this when your brain works you stupid cunt
+
     }
 
     //button pressed events
@@ -85,8 +89,11 @@ public class BananaUpgrades : MonoBehaviour
     public void btnUpgrHandsCostDeduction(){
         
         if(UpgradeNo[2] < ArrBounds){ // makes usre that it does not go out of the array bounds.
-            UpgradeNo[2]++;
-            txtUpdate();
+            if(main.bananas >= getHandDeductionCost(UpgradeNo[2])){
+                UpgradeNo[2]++;
+                txtUpdate();
+                HandDeductionCheck(UpgradeNo[2]);
+            }
 
         }
         
@@ -97,8 +104,11 @@ public class BananaUpgrades : MonoBehaviour
     }
     public void btnUpgrMonkisCostDeduction(){
         if(UpgradeNo[3] < ArrBounds){  // makes sure that it does not go out of the array bounds.
-            UpgradeNo[3]++;   
-            txtUpdate();
+            if(main.bananas >= getMonkiDeductionCost(UpgradeNo[3])){
+                UpgradeNo[3]++;
+                txtUpdate();
+                MonkiDeductionCheck(UpgradeNo[3]);
+            }
 
         }
      
@@ -109,9 +119,13 @@ public class BananaUpgrades : MonoBehaviour
 
     public void btnUpgrAll(){
         if(UpgradeNo[4] < ArrBounds){
-            UpgradeNo[4]++;
-            txtUpdate();
+            if(main.bananas >= getAllCost(UpgradeNo[4])){
 
+                UpgradeNo[4]++;
+                txtUpdate();
+                allUpgradesCheck(UpgradeNo[4]);
+
+            }
         }
 
 
@@ -293,7 +307,7 @@ public class BananaUpgrades : MonoBehaviour
     }
 
 
-
+    //makes sure that the upgrade is done.
 
     public void HandMultCheck(int x){
         if(x == 1){Hand.Hands[0].productionPerClick *=  2;}
@@ -327,31 +341,86 @@ public class BananaUpgrades : MonoBehaviour
     
 
     public void HandDeductionCheck(int x){
-        if(x == 1){ }
-
-
-
-        if(x == 2){}
-        if(x == 3){}
-        if(x == 4){}
-        if(x == 5){}
-        if(x == 6){}
-        if(x == 7){}
-        if(x == 8){}
-        if(x == 9){}
-        if(x == 10){}
-        if(x == 11){}
-        if(x == 12){}
+        if(x == 1){Hand.Hands[0].initialCost *= 0.01;}
+        if(x == 2){Hand.Hands[1].initialCost *= 0.01;}
+        if(x == 3){Hand.Hands[2].initialCost *= 0.01;}
+        if(x == 4){Hand.Hands[3].initialCost *= 0.01;}
+        if(x == 5){Hand.Hands[4].initialCost *= 0.01;}
+        if(x == 6){Hand.Hands[5].initialCost *= 0.01;}
+        if(x == 7){Hand.Hands[6].initialCost *= 0.01;}
+        if(x == 8){Hand.Hands[7].initialCost *= 0.01;} 
+        if(x == 9){Hand.Hands[8].initialCost *= 0.01;}
+        if(x == 10){Hand.Hands[9].initialCost *= 0.01;}
+        if(x == 11){Hand.Hands[10].initialCost *= 0.01;}
+        if(x == 12){Hand.Hands[11].initialCost *= 0.01;}
 
 
     }
 
 
     public void MonkiDeductionCheck(int x){
-
+        if(x == 1){Monki.monkis[0].initialCost *= 0.01;}
+        if(x == 2){Monki.monkis[1].initialCost *= 0.01;}
+        if(x == 3){Monki.monkis[2].initialCost *= 0.01;}
+        if(x == 4){Monki.monkis[3].initialCost *= 0.01;}
+        if(x == 5){Monki.monkis[4].initialCost *= 0.01;}
+        if(x == 6){Monki.monkis[5].initialCost *= 0.01;}
+        if(x == 7){Monki.monkis[6].initialCost *= 0.01;}
+        if(x == 8){Monki.monkis[7].initialCost *= 0.01;}
+        if(x == 9){Monki.monkis[8].initialCost *= 0.01;}
+        if(x == 10){Monki.monkis[9].initialCost *= 0.01;}
+        if(x == 11){Monki.monkis[10].initialCost *= 0.01;}
+        if(x == 12){Monki.monkis[11].initialCost *= 0.01;}
         
     }
 
-    
+    public void allUpgradesCheck(int x){
+        if(x == 1){
+            for(int i = 0; i <= 11; i++){
+                Hand.Hands[i].productionPerClick *=  2;
 
+            }
+        }
+        if(x == 2){
+            for(int i = 0; i <= 11; i++){
+                Monki.monkis[i].productionPerClick *= 2;
+            }
+        }
+        if(x == 3){Hand.totalBPC *= 2;}
+        if(x == 4){Monki.totalBPS *= 2;}
+
+
+
+        if(x == 5){
+            for(int i = 0; i <= 911; i++){
+                Hand.Hands[i].productionPerClick *= 2;
+            }}
+        if(x == 6){
+            for(int i = 0; i <= 11; i++){
+                Monki.monkis[i].productionPerClick *= 2;
+            }
+        }
+        if(x == 7){Hand.totalBPC *= 2;}
+        if(x == 8){Monki.totalBPS *= 2;}
+
+
+
+        if(x == 9){
+            for(int i = 0; i <= 11; i++){
+                Hand.Hands[i].productionPerClick *= 2;
+            }
+        }
+        if(x == 10){
+            for(int i = 0; i <= 11; i++){
+                Monki.monkis[i].productionPerClick *= 2;
+            }
+        }
+        if(x == 11){Hand.totalBPC *= 2;}
+        if(x == 12){Monki.totalBPS *= 2;}
+
+    }
+    
 }
+
+
+

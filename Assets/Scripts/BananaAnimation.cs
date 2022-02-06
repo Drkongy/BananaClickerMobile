@@ -22,6 +22,9 @@ public class BananaAnimation : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             {
                 targetSize = regularSize;
             }
+
+            //when the banana is pressed the size of the banana will increase
+            // when the banana is not being pressed it will stay at the original size.
             banana.localScale = Vector3.SmoothDamp(banana.localScale, targetSize, ref zero, time, 150f);
         }
     public void OnPointerDown(PointerEventData eventData)

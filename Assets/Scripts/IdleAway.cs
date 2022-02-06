@@ -28,19 +28,22 @@ public class IdleAway : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.frameCount % this.Delay != 0) return;
+        if (Time.frameCount % this.Delay != 0) return;  // makes sure that it's not updating every frame. makes sure that the game does not lag.
         saveTime();
+
+
     }
 
 
     public void saveTime(){
+        // creates a string that stores all the date contents
         string[] contents = new string[]{
             ""+dt.ToString(),
             ""+main.BPS.ToString()
 
         };
         string saveString = string.Join(SAVESEPERATOR, contents);
-        File.WriteAllText(Application.persistentDataPath + "/Idle.json", saveString);
+        File.WriteAllText(Application.persistentDataPath + "/Idle.json", saveString); // saved to a file with a seprator which makes it easier to load the individuak varuibles.
     }
 
     public void load(){
@@ -60,7 +63,7 @@ public class IdleAway : MonoBehaviour
             main.bananas += b;      
             // adds the BPS made away to the bananas.
             Debug.Log("Been away for: " + ts.TotalSeconds + " Seconds. You have made : "  + b + " White away");
-        }catch(IOException e){
+        }catch(IOException e){ // this IOException is for when the file does not exist.
             Debug.Log(e);
             File.WriteAllText(Application.persistentDataPath + "/Idle.json", "Idle File Created!"); 
         }

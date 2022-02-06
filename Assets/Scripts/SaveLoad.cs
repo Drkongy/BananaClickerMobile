@@ -29,14 +29,18 @@ public class SaveLoad : MonoBehaviour
     }
     public void Update()
     {
-        if (Time.frameCount % this.Delay != 0) return;
+        if (Time.frameCount % this.Delay != 0) return;  // makes sure there is a delay when saving a file, makes the game less laggy as their are less saves taking place.
         Save();
 
         
     }
+
+    // Location of persistent files are: C:\Users\Drkon\AppData\LocalLow\MonkiStudios\BananaClickerMobile
+
+
     public void Save(){
-        Debug.Log("Saved");
-        //Debug.Log(Hand.OriginalHandCost[0]);
+        Debug.Log("Saved"); 
+        // string array is created to store all of the values that need to be saved.
         string[] contents = new string[]{
             //main data
             ""+main.bananas.ToString("0." + new string('#', 399)),
@@ -160,8 +164,8 @@ public class SaveLoad : MonoBehaviour
 
 
         };
-        string saveString = string.Join(SAVESEPERATOR, contents);
-        File.WriteAllText(Application.persistentDataPath + "/save.json", saveString);
+        string saveString = string.Join(SAVESEPERATOR, contents); // the save seprater seperates all of the varibles so that they can easily be accessed when loading the data.
+        File.WriteAllText(Application.persistentDataPath + "/save.json", saveString); // writes this data to the save file.
     }
 
     public void Load(){
@@ -294,7 +298,6 @@ public class SaveLoad : MonoBehaviour
             BananaUpgr.UpgradeNo[4] = int.Parse(contents[105]);
 
 
-            Debug.Log(Application.persistentDataPath);
         }catch(IOException e){  // this will happen if the file does not exist
             Debug.Log(e);
             File.WriteAllText(Application.persistentDataPath + "/save.json", "Save File Created!"); 

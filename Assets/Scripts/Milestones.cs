@@ -6,7 +6,11 @@ using UnityEngine;
 
 public class Milestones : MonoBehaviour
 {
-    public double milesStoness(int amount, double profit)
+
+
+    // this is a milestones upgrades which give a small upgrade to the user when a milestone is reached. 
+    // it needs the shop amount to have a certain amount before it can give the upgrade.
+    public double milesStoness(int amount, double profit)   // takes in two varibles, the amount to check if a milestone is reached and the profit for when returning how much the shop is making now.
         {
             if (amount == 50)
             {

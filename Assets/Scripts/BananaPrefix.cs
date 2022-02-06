@@ -426,7 +426,7 @@ public class BananaPrefix : MonoBehaviour
             }
         }
         else
-        {
+        { // smaller suffic that will fit on buttons.
             if (number >= 1e306)
             {
                 return ((number / 1e306).ToString(precision + " UNCENT"));

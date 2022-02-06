@@ -34,12 +34,14 @@ public class Controller : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        bananas += BPS * Time.deltaTime;
+        bananas += BPS * Time.deltaTime; // This is the main function that increases the bananas every second.
         
-        txtBPC.text = prefix.Suffix(BPC, "0.00", false) + " BPC";
-        txtBPS.text = prefix.Suffix(BPS, "0.00", false) + " BPS";
+        txtBPC.text = prefix.Suffix(BPC, "0.00", false) + " BPC";       // this updates the bpc with it's suffix
+        txtBPS.text = prefix.Suffix(BPS, "0.00", false) + " BPS";       // this updates the bpc with a suffix
 
         txtBananas.text = prefix.Suffix(bananas, "0.00", true);
+
+        // if bananas is not equal to one it will use a singular noun instead of a plural.
         if (bananas != 1)
         {
             txtBananas.text += " Bananas";
@@ -50,7 +52,7 @@ public class Controller : MonoBehaviour {
         }
     }
 
-    public void bananaClick()
+    public void bananaClick()   // method that increases the bananas every time you click on the bananas.
     {
         bananas += BPC;
         txtBananas.text = bananas + " Bananas";

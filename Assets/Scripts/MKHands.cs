@@ -134,10 +134,11 @@ public class MKHands : MonoBehaviour
 
     void Update()
     {
-        main.BPC = 1+totalBPC;
+        main.BPC = 1+totalBPC; // sends the total BPC to the main controller class.
 
     }
-
+    // the methods below are for each individual shop, and it also checks what the cycle number is.
+    // depending on the cycle number it will upgrade it a certain amount of times.
 
     public void buyWoodenHand(){
         if(AL.CycleNo == 1){buy1(0);}
@@ -252,6 +253,7 @@ public class MKHands : MonoBehaviour
             Hands[x].productionPerClick = miles.milesStoness(Hands[x].count, Hands[x].productionPerClick);
         }
     }
+    // checks to see if you can buy the shop 10 times and buys it.
 
     private void buy10(int x){
         double temp = 0;
@@ -278,6 +280,7 @@ public class MKHands : MonoBehaviour
 
 
     }
+    // checks if the shop can buy it 100 times and buys it if it can.
 
     private void buy100(int x){
         double temp = 0;

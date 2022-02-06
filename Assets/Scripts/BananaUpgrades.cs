@@ -42,7 +42,7 @@ public class BananaUpgrades : MonoBehaviour
 
     public void txtUpdate(){
         // for the text
-        txtUpgrade[0].text = getHandUpgradeText(UpgradeNo[0]);
+        txtUpgrade[0].text = getHandUpgradeText(UpgradeNo[0]);      
         txtUpgrade[1].text = getMonkisUpgradeText(UpgradeNo[1]);
         txtUpgrade[2].text = getHandDeductionUpgradeText(UpgradeNo[2]);
         txtUpgrade[3].text = getMonkiDeductionUpgradeText(UpgradeNo[3]);
@@ -68,9 +68,9 @@ public class BananaUpgrades : MonoBehaviour
     public void btnUpgrHands(){
         if(UpgradeNo[0] < ArrBounds){  // makes sure that it does not go out of the array bounds.
             if(main.bananas >= getHandCost(UpgradeNo[0])){
-                UpgradeNo[0]++;
-                txtUpdate();
-                HandMultCheck(UpgradeNo[0]);
+                UpgradeNo[0]++; // increases the upgrade number by 1
+                txtUpdate();    // updates the text for upgrades
+                HandMultCheck(UpgradeNo[0]);    // adds the multiplier for the shop.
             }
         }
     }
@@ -78,7 +78,7 @@ public class BananaUpgrades : MonoBehaviour
     public void btnUpgrMonkis(){
         if(UpgradeNo[1] < ArrBounds){  // makes sure that it does not go out of the array bounds.
             if(main.bananas >= getMonkisCost(UpgradeNo[1])){
-                UpgradeNo[1]++;
+                UpgradeNo[1]++; 
                 txtUpdate();
                 MonkiMultCheck(UpgradeNo[1]);
             }

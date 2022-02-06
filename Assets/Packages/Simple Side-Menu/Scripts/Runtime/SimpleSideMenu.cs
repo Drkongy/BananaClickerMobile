@@ -103,6 +103,9 @@ namespace DanielLochner.Assets.SimpleSideMenu
                 startPosition = mouseLocalPosition;
             }
             previousPosition = rectTransform.position;
+            //Debug.Log("dragtest");
+
+
         }
         public void OnDrag(PointerEventData eventData)
         {

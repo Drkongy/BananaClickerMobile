@@ -10,47 +10,60 @@ using UnityEngine.UI;
 
 public class AmountsLoop : MonoBehaviour
 {
+    
+    /* 
+
+    @author Zeeshan
+    This class makes sure that the user can buy multiple shops at the same time.
+    they can either buy 1x shops, 10x shops or 100x shops.
+    this makes it easier for the user as it means that they don't need to click the button 100 times.
+    makes it much more flexible for the user.
+    This class just updates the text varibles, the MKHands and MKMonki classes are used to buy the actual hands.
+
+
+
+
+    */
+
+
     // Start is called before the first frame update
     public Controller main; // Links to the main controller scipt
     public MKHands Hand;    // links the MKHands script to this file.
     public MKMonkis Monki;  // links to the MKMonkis script.
     public BananaPrefix prefix;  //Links the Prefix script to this
 
-    public int CycleNo;
+    public int CycleNo; // number that has the equivalent of the amount that needs to be bought. 1 = 1x, 2 = 10x, 3 = 100x.
 
-    public TMP_Text[] txtBuyCountHands = new TMP_Text[12];
-    public TMP_Text[] txtBuyCountMonkis = new TMP_Text[12];
+    public TMP_Text[] txtBuyCountHands = new TMP_Text[12];   // text varibles for the count of the hands shop. 
+    public TMP_Text[] txtBuyCountMonkis = new TMP_Text[12]; // text varibles for the count of the Monkis shop.
 
-    public TMP_Text btnTxtBuyCount;
+    public TMP_Text btnTxtBuyCount; // the buy amount button text, can either be 1x, 10x, or 100x
 
-    public AmountsLoop(){
-        //CycleNo;
-    }
+
     void Start()
     {
-        //txtBuyCountHands = new TMP_Text[12];
-        CycleNo = 0;
-        btnAmount();
+        CycleNo = 0;    // when the game starts it makes sure that it's initilized as 0, since the btn amount will increase it by one within the method.
+        btnAmount();    // links to the button in game, when it's clicked it changes the text values of all the varibles.
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() // this always checks what the cycleno is, 
     {
         if (CycleNo == 1)
         {
-            txtXone();
+            txtXone(); // if they cycleNo is one it will do the 1x, and updates all the text varibles.
 
         }else if(CycleNo == 2){
-            txtXten();
+            txtXten();  // if they cycleNo is two it will do the 10x, and updates all the text varibles.
 
         }else{
-            txtXhundred();
+            txtXhundred();  // if they cycleNo is Three, or something else it will do the 100x, and updates all the text varibles.
+            // the CycleNo can never be more that 3 so the else statement will always output 100x
         }
     }
 
 
-
-    public void BUUpdate(){
+    public void BUUpdate(){ // this is used to update text from outside the classes.
         if (CycleNo == 1)
         {
             txtXone();
@@ -65,8 +78,6 @@ public class AmountsLoop : MonoBehaviour
             Debug.Log("test three");
         }
         
-
-
     }
 
     public void btnAmount(){
@@ -88,7 +99,7 @@ public class AmountsLoop : MonoBehaviour
         }
     }
 
-    public void txtLoop(string s){
+    public void txtLoop(string s){ // quick method that loops through all 12 of the monki and hands shops, and assins it a string.
         btnTxtBuyCount.text = s;
         for (int i = 0; i <= 11; i++)
         {
@@ -97,8 +108,8 @@ public class AmountsLoop : MonoBehaviour
         }
     }
     
-    public void txtXone(){
-        for (int i = 0; i <= 11; i++)
+    public void txtXone(){ // this is the method that displays the text for 1x, it's simple and no calculations are needed.
+        for (int i = 0; i <= 11; i++) // loops through all 12 shops, means their is no code repeated.
         {
             Hand.Hands[i].costText.text = "Cost: " + prefix.Suffix(Hand.Hands[i].cost, "0.0", false) + " Bananas";
             Hand.Hands[i].countText.text = Hand.Hands[i].count.ToString("0");
@@ -110,7 +121,7 @@ public class AmountsLoop : MonoBehaviour
         }
     }
 
-    public void txtXten(){
+    public void txtXten(){  // method updates the shop text but for 10x ammounts
         for (int x = 0; x <= 11; x++)
         {
 
@@ -123,9 +134,9 @@ public class AmountsLoop : MonoBehaviour
             double mTemp1;
             double mTemp2 = 0;
 
-            for (int i = 0;i <= 9; i++){
+            for (int i = 0;i <= 9; i++){ // this for for statement loops 10 times, which will give temp values of the shop costs and production
                 //hands
-                temp2 += Hand.Hands[x].productionPerClick;
+                temp2 += Hand.Hands[x].productionPerClick; 
                 temp1 = Hand.Hands[x].initialCost * (Math.Pow((1 + (Hand.Hands[x].costMultiplier) / (1 + (Hand.Hands[x].count + i) / (5000))), Hand.Hands[x].count + i));
                 temp +=temp1;
                 //monkis
@@ -135,9 +146,8 @@ public class AmountsLoop : MonoBehaviour
 
 
             }
-            //temp2 -= Hand.Hands[x].productionPerClick;  // hands
-            //mTemp2 -= Monki.monkis[x].productionPerClick;   // monkis
-
+      
+            // once the temp values are created, it updates the text values for 10x.
             // hands
             Hand.Hands[x].costText.text = "Cost: " + prefix.Suffix(temp, "0.0", false) + " Bananas x10";
             Hand.Hands[x].countText.text = Hand.Hands[x].count.ToString("0");
@@ -155,7 +165,7 @@ public class AmountsLoop : MonoBehaviour
 
     }
 
-    public void txtXhundred(){
+    public void txtXhundred(){  // method updates the shop text but for 1000x ammounts
         for (int x = 0; x <= 11; x++)
         {
 
@@ -168,7 +178,8 @@ public class AmountsLoop : MonoBehaviour
             double mTemp1;
             double mTemp2 = 0;
 
-            for (int i = 0;i <= 99; i++){
+            // once the temp values are created, it updates the text values for 10x.
+            for (int i = 0;i <= 99; i++){   
                 //hands
                 temp2 += Hand.Hands[x].productionPerClick;
                 temp1 = Hand.Hands[x].initialCost * (Math.Pow((1 + (Hand.Hands[x].costMultiplier) / (1 + (Hand.Hands[x].count + i) / (5000))), Hand.Hands[x].count + i));
@@ -180,8 +191,7 @@ public class AmountsLoop : MonoBehaviour
 
 
             }
-            //temp2 -= Hand.Hands[x].productionPerClick;  // hands
-            //mTemp2 -= Monki.monkis[x].productionPerClick;   // monkis
+
 
             // hands
             Hand.Hands[x].costText.text = "Cost: " + prefix.Suffix(temp, "0.0", false) + " Bananas x100";

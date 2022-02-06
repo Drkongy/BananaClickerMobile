@@ -18,7 +18,7 @@ public class MKMonkis : MonoBehaviour
     
     public MKArrayClass.MKHands[] monkis; // Makes it easier to access the varibles.
     public double[] OriginalMonkisCost;
-    public float mult = 0.03f;
+    public float mult = 0.03f;      // multiplier for all of the shops.
 
     // TMP_Text varibles that would display the values onto the main game.
     public TMP_Text txtMonkiCount1;
@@ -106,10 +106,11 @@ public class MKMonkis : MonoBehaviour
     }
     void Update()
     {
-        main.BPS = 0+totalBPS; // updates the bananas per second.
+        main.BPS = 0+totalBPS; // updates the bananas per second to the new BPS.
     }
 
-
+    // the methods below are for each individual shop, and it also checks what the cycle number is.
+    // depending on the cycle number it will upgrade it a certain amount of times.
     public void BuyMarmocets(){ 
         if(AL.CycleNo == 1){buy1(0);}
         if(AL.CycleNo == 2){buy10(0);}
@@ -208,6 +209,8 @@ public class MKMonkis : MonoBehaviour
         }
     }
 
+
+    // checks to see if you can buy the shop 10 times and buys it.
     private void buy10(int x){
         double temp = 0;
         double temp1;
@@ -233,6 +236,8 @@ public class MKMonkis : MonoBehaviour
 
     }
 
+
+    // checks if the shop can buy it 100 times and buys it if it can.
     private void buy100(int x){
         double temp = 0;
         double temp1;

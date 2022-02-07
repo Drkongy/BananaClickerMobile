@@ -67,15 +67,10 @@ public class AmountsLoop : MonoBehaviour
         if (CycleNo == 1)
         {
             txtXone();
-            Debug.Log("test one");
-
         }else if(CycleNo == 2){
             txtXten();
-            Debug.Log("test two");
-
         }else if(CycleNo == 3){
             txtXhundred();
-            Debug.Log("test three");
         }
         
     }

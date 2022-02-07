@@ -234,13 +234,6 @@ public class MKHands : MonoBehaviour
 
 
 
-
-
-
-
-
-
-
     // Functions that choose how much shop items you want to buy.
 
     private void buy1(int x){
@@ -252,6 +245,7 @@ public class MKHands : MonoBehaviour
 
             Hands[x].productionPerClick = miles.milesStoness(Hands[x].count, Hands[x].productionPerClick);
         }
+
     }
     // checks to see if you can buy the shop 10 times and buys it.
 
@@ -306,6 +300,17 @@ public class MKHands : MonoBehaviour
 
 
     }
+
+    public void iniUpdate(int x){
+        Hands[x].cost = Hands[x].initialCost * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count) / (5000))), Hands[x].count + 1));
+        // this goes with the hand cost deduction upgrade, it will not work without this, same with the method below!
+        // this links to the monkis cost deduction upgrade, without this the text will not update instantly.
+    
+    }
+
+    
+
+
 
 
 

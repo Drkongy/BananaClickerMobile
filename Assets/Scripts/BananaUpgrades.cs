@@ -56,18 +56,15 @@ public class BananaUpgrades : MonoBehaviour
         txtUpgradeCost[3].text = "Cost: " + prefix.Suffix(getMonkiDeductionCost(UpgradeNo[3]), "0.0", false) + " Bananas";
         txtUpgradeCost[4].text = "Cost: " + prefix.Suffix(getAllCost(UpgradeNo[4]), "0.0", false) + " Bananas";
         
-
-
-        // for the shops
-        
-        //AL.BUUpdate(); do this when your brain works you stupid cunt
-
     }
+
+
 
     //button pressed events
     public void btnUpgrHands(){
         if(UpgradeNo[0] < ArrBounds){  // makes sure that it does not go out of the array bounds.
             if(main.bananas >= getHandCost(UpgradeNo[0])){
+                main.bananas -= getHandCost(UpgradeNo[0]);
                 UpgradeNo[0]++; // increases the upgrade number by 1
                 txtUpdate();    // updates the text for upgrades
                 HandMultCheck(UpgradeNo[0]);    // adds the multiplier for the shop.
@@ -78,6 +75,7 @@ public class BananaUpgrades : MonoBehaviour
     public void btnUpgrMonkis(){
         if(UpgradeNo[1] < ArrBounds){  // makes sure that it does not go out of the array bounds.
             if(main.bananas >= getMonkisCost(UpgradeNo[1])){
+                main.bananas -= getMonkisCost(UpgradeNo[1]);
                 UpgradeNo[1]++; 
                 txtUpdate();
                 MonkiMultCheck(UpgradeNo[1]);
@@ -90,6 +88,7 @@ public class BananaUpgrades : MonoBehaviour
         
         if(UpgradeNo[2] < ArrBounds){ // makes usre that it does not go out of the array bounds.
             if(main.bananas >= getHandDeductionCost(UpgradeNo[2])){
+                main.bananas -= getHandDeductionCost(UpgradeNo[2]);
                 UpgradeNo[2]++;
                 txtUpdate();
                 HandDeductionCheck(UpgradeNo[2]);
@@ -105,6 +104,7 @@ public class BananaUpgrades : MonoBehaviour
     public void btnUpgrMonkisCostDeduction(){
         if(UpgradeNo[3] < ArrBounds){  // makes sure that it does not go out of the array bounds.
             if(main.bananas >= getMonkiDeductionCost(UpgradeNo[3])){
+                main.bananas -= getMonkiDeductionCost(UpgradeNo[3]);
                 UpgradeNo[3]++;
                 txtUpdate();
                 MonkiDeductionCheck(UpgradeNo[3]);
@@ -120,7 +120,7 @@ public class BananaUpgrades : MonoBehaviour
     public void btnUpgrAll(){
         if(UpgradeNo[4] < ArrBounds){
             if(main.bananas >= getAllCost(UpgradeNo[4])){
-
+                main.bananas -= getAllCost(UpgradeNo[4]);
                 UpgradeNo[4]++;
                 txtUpdate();
                 allUpgradesCheck(UpgradeNo[4]);
@@ -353,7 +353,10 @@ public class BananaUpgrades : MonoBehaviour
         if(x == 10){Hand.Hands[9].initialCost *= 0.01;}
         if(x == 11){Hand.Hands[10].initialCost *= 0.01;}
         if(x == 12){Hand.Hands[11].initialCost *= 0.01;}
+        
+        Hand.iniUpdate(x-1); // this makes sure that the deduction text is updated.
 
+                
 
     }
 
@@ -371,6 +374,9 @@ public class BananaUpgrades : MonoBehaviour
         if(x == 10){Monki.monkis[9].initialCost *= 0.01;}
         if(x == 11){Monki.monkis[10].initialCost *= 0.01;}
         if(x == 12){Monki.monkis[11].initialCost *= 0.01;}
+
+        Monki.iniUpdate(x-1); // this makes sure that the deduction text is updated.
+
         
     }
 

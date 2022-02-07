@@ -189,14 +189,6 @@ public class MKMonkis : MonoBehaviour
 
 
 
-
-
-
-
-
-
-
-
     //function to see how many items you can buy.
     private void buy1(int x){
         if(main.bananas >= monkis[x].cost){
@@ -261,6 +253,12 @@ public class MKMonkis : MonoBehaviour
         }
 
 
+    }
+
+    public void iniUpdate(int x){
+        monkis[x].cost = monkis[x].initialCost * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count) / (5000))), monkis[x].count + 1)); // adds a one to make sure that it updates the varible after an update is provided.
+        // this goes with the hand cost deduction upgrade, it will not work without this, same with the method below!
+    
     }
     
     

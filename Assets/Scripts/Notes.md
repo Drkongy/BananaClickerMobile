@@ -1,6 +1,5 @@
 Bugs:
-Make sure that after buying the cost deduction it automatically updates the cost. 
-double check and maker sure that all of the upgrades are working
+Current bugs fixed.
 
 
 

@@ -3819,7 +3819,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Zeeshan  / Drkong \n\n\nThank leo for art and the help!"
+  m_text: "Zeeshan  / Drkong \n\n\nThank to leo for art and the help!\n\nThank to
+    TrickyTho for the Help and Motivation!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9368,7 +9369,12 @@ MonoBehaviour:
 
     Local upgrades - small
     upgrades that increase the BPC & BPS, they also reduce the cost of the shops
-    so you can buy more!'
+    so you can buy more!
+
+
+    Prestiging - restarting from scratch, but you get
+    a new currency that allows you to progress much further into the game. Get a
+    much higher Banana Count.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9395,7 +9401,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
+  m_fontSize: 30.95
   m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9560,8 +9566,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.85510254, y: -1491.8197}
-  m_SizeDelta: {x: 0, y: 2983.6401}
+  m_AnchoredPosition: {x: 2.13031, y: -3716.4043}
+  m_SizeDelta: {x: 0, y: 7432.8086}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1956967388
 MonoBehaviour:
@@ -9583,8 +9589,64 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "#\tAmount\tUpgrade\r\n1\t50\t\t2x\r\n2\t100\t\t5x\r\n3\t150\t\t2x\r\n4\t200\t\t2x\r\n5\t250\t\t10x\r\n6\t300\t\t2x\r\n7\t350\t\t2x\r\n8\t400\t\t2x\r\n9\t450\t\t2x\r\n10\t500\t\t25x\r\n11\t550\t\t2x\r\n12\t600\t\t5x\r\n13\t650\t\t2x\r\n14\t700\t\t2x\r\n15\t750\t\t25x\r\n16\t800\t\t2x\r\n17\t850\t\t2x\r\n18\t900\t\t2x\r\n19\t950\t\t2x\r\n20\t1000\t\t25x\r\n21\t1050\t\t2x\r\n22\t1100\t\t5x\r\n23\t1150\t\t5x\r\n24\t1200\t\t2x\r\n25\t1250\t\t10x\r\n26\t1300\t\t2x\r\n27\t1350\t\t2x\r\n28\t1400\t\t5x\r\n29\t1450\t\t2x\r\n30\t1500\t\t25x\r\n31\t1550\t\t2x\r\n32\t1600\t\t2x\r\n33\t1650\t\t5x\r\n34\t1700\t\t2x\r\n35\t1750\t\t10x\r\n36\t1800\t\t2x\r\n37\t1850\t\t2x\r\n38\t1900\t\t2x\r\n39\t1950\t\t2x\r\n40\t2000\t\t20x\r\n41\t2050\t\t2x\r\n42\t2100\t\t5x\r\n43\t2150\t\t5x\r\n44\t2200\t\t2x\r\n45\t2250\t\t25x\r\n46\t2300\t\t2x\r\n47\t2350\t\t2x\r\n48\t2400\t\t2x\r\n49\t2450\t\t2x\r\n50\t2500\t\t20x\r\n51\t2550\t\t2x\r\n52\t2600\t\t2x\r\n53\t2650\t\t5x\r\n54\t2700\t\t2x\r\n55\t2750\t\t25x\r\n56\t2800\t\t2x\r\n57\t2850\t\t2x\r\n58\t2900\t\t2x\r\n59\t2950\t\t2x\r\n60\t3000\t\t20x\r\n61\t3050\t\t2x\r\n62\t3100\t\t2x\r\n63\t3150\t\t2x\r\n64\t3200\t\t2x\r\n65\t3250\t\t5x\r\n66\t3300\t\t2x\r\n67\t3350\t\t2x\r\n68\t3400\t\t5x\r\n69\t3450\t\t2x\r\n70\t3500\t\t25x\r\n71\t3550\t\t2x\r\n72\t3600\t\t2x\r\n73\t3650\t\t2x\r\n74\t3700\t\t2x\r\n75\t3750\t\t5x\r\n76\t3800\t\t2x\r\n77\t3850\t\t2x\r\n78\t3900\t\t2x\r\n79\t3950\t\t2x\r\n80\t4000\t\t100x\r\n81\t4050\t\t2x\r\n82\t4100\t\t2x\r\n83\t4150\t\t2x\r\n84\t4200\t\t2x\r\n85\t4250\t\t5x\r\n86\t4300\t\t2x\r\n87\t4350\t\t2x\r\n88\t4400\t\t2x\r\n89\t4450\t\t2x\r\n90\t4500\t\t10x\r\n91\t4550\t\t2x\r\n92\t4600\t\t2x\r\n93\t4650\t\t2x\r\n94\t4700\t\t2x\r\n95\t4750\t\t10x\r\n96\t4800\t\t2x\r\n97\t4850\t\t2x\r\n98\t4900\t\t2x\r\n99\t4950\t\t2x\r\n100\t5000\t\t100x\nMore
-    to come :D"
+  m_text: "#\t    Amount\t    Upgrade\r\n1\t    50\t\t    2x\r\n2\t    100\t    5x\r\n3\t   
+    150\t    2x\r\n4\t    200\t    2x\r\n5\t    250\t    10x\r\n6\t    300\t    2x\r\n7\t   
+    350\t    2x\r\n8\t    400\t    2x\r\n9\t    450\t    2x\r\n10\t    500\t    25x\r\n11\t   
+    550\t    2x\r\n12\t    600\t    5x\r\n13\t    650\t    2x\r\n14\t    700\t   
+    2x\r\n15\t    750\t    25x\r\n16\t    800\t    2x\r\n17\t    850\t    2x\r\n18\t   
+    900\t    2x\r\n19\t    950\t    2x\r\n20\t    1000\t    25x\r\n21\t    1050\t   
+    2x\r\n22\t    1100\t    5x\r\n23\t    1150\t    5x\r\n24\t    1200\t    2x\r\n25\t   
+    1250\t    10x\r\n26\t    1300\t    2x\r\n27\t    1350\t    2x\r\n28\t    1400\t   
+    5x\r\n29\t    1450\t    2x\r\n30\t    1500\t    25x\r\n31\t    1550\t    2x\r\n32\t   
+    1600\t    2x\r\n33\t    1650\t    5x\r\n34\t    1700\t    2x\r\n35\t    1750\t   
+    10x\r\n36\t    1800\t    2x\r\n37\t    1850\t    2x\r\n38\t    1900\t    2x\r\n39\t   
+    1950\t    2x\r\n40\t    2000\t    20x\r\n41\t    2050\t    2x\r\n42\t    2100\t   
+    5x\r\n43\t    2150\t    5x\r\n44\t    2200\t    2x\r\n45\t    2250\t    25x\r\n46\t   
+    2300\t    2x\r\n47\t    2350\t    2x\r\n48\t    2400\t    2x\r\n49\t    2450\t   
+    2x\r\n50\t    2500\t    20x\r\n51\t    2550\t    2x\r\n52\t    2600\t    2x\r\n53\t   
+    2650\t    5x\r\n54\t    2700\t    2x\r\n55\t    2750\t    25x\r\n56\t    2800\t   
+    2x\r\n57\t    2850\t    2x\r\n58\t    2900\t    2x\r\n59\t    2950\t    2x\r\n60\t   
+    3000\t    20x\r\n61\t    3050\t    2x\r\n62\t    3100\t    2x\r\n63\t    3150\t   
+    2x\r\n64\t    3200\t    2x\r\n65\t    3250\t    5x\r\n66\t    3300\t    2x\r\n67\t   
+    3350\t    2x\r\n68\t    3400\t    5x\r\n69\t    3450\t    2x\r\n70\t    3500\t   
+    25x\r\n71\t    3550\t    2x\r\n72\t    3600\t    2x\r\n73\t    3650\t    2x\r\n74\t   
+    3700\t    2x\r\n75\t    3750\t    5x\r\n76\t    3800\t    2x\r\n77\t    3850\t   
+    2x\r\n78\t    3900\t    2x\r\n79\t    3950\t    2x\r\n80\t    4000\t    100x\r\n81\t   
+    4050\t    2x\r\n82\t    4100\t    2x\r\n83\t    4150\t    2x\r\n84\t    4200\t   
+    2x\r\n85\t    4250\t    5x\r\n86\t    4300\t    2x\r\n87\t    4350\t    2x\r\n88\t   
+    4400\t    2x\r\n89\t    4450\t    2x\r\n90\t    4500\t    10x\r\n91\t    4550\t   
+    2x\r\n92\t    4600\t    2x\r\n93\t    4650\t    2x\r\n94\t    4700\t    2x\r\n95\t   
+    4750\t    10x\r\n96\t    4800\t    2x\r\n97\t    4850\t    2x\r\n98\t    4900\t   
+    2x\r\n99\t    4950\t    2x\r\n100\t    5000\t    100x\r\n101\t    5050\t    2x\r\n102\t   
+    5100\t    2x\r\n103\t    5150\t    2x\r\n104\t    5200\t    2x\r\n105\t    5250\t   
+    5x\r\n106\t    5300\t    2x\r\n107\t    5350\t    2x\r\n108\t    5400\t    2x\r\n109\t   
+    5450\t    2x\r\n110\t    5500\t    10x\r\n111\t    5550\t    2x\r\n112\t    5600\t   
+    2x\r\n113\t    5650\t    2x\r\n114\t    5700\t    2x\r\n115\t    5750\t    5x\r\n116\t   
+    5800\t    2x\r\n117\t    5850\t    2x\r\n118\t    5900\t    2x\r\n119\t    5950\t   
+    2x\r\n120\t    6000\t       10x\r\n121\t    6050\t    2x\r\n122\t    6100\t   
+    2x\r\n123\t    6150\t    2x\r\n124\t    6200\t    2x\r\n125\t    6250\t    5x\r\n126\t   
+    6300\t    2x\r\n127\t    6350\t    2x\r\n128\t    6400\t    2x\r\n129\t    6450\t   
+    2x\r\n130\t    6500\t    10x\r\n131\t    6550\t    2x\r\n132\t    6600\t    2x\r\n133\t   
+    6650\t    2x\r\n134\t    6700\t    2x\r\n135\t    6750\t    5x\r\n136\t    6800\t   
+    2x\r\n137\t    6850\t    2x\r\n138\t    6900\t    2x\r\n139\t    6950\t    2x\r\n140\t   
+    7000\t    10x\r\n141\t    7050\t    2x\r\n142\t    7100\t    2x\r\n143\t    7150\t   
+    2x\r\n144\t    7200\t    2x\r\n145\t    7250\t    5x\r\n146\t    7300\t    2x\r\n147\t   
+    7350\t    2x\r\n148\t    7400\t    2x\r\n149\t    7450\t    2x\r\n150\t    7500\t   
+    10x\r\n151\t    7550\t    2x\r\n152\t    7600\t    2x\r\n153\t    7650\t    2x\r\n154\t   
+    7700\t    2x\r\n155\t    7750\t    5x\r\n156\t    7800\t    2x\r\n157\t    7850\t   
+    2x\r\n158\t    7900\t    2x\r\n159\t    7950\t    2x\r\n160\t    8000\t    10x\r\n161\t   
+    8050\t    2x\r\n162\t    8100\t    2x\r\n163\t    8150\t    2x\r\n164\t    8200\t   
+    2x\r\n165\t    8250\t    5x\r\n166\t    8300\t    2x\r\n167\t    8350\t    2x\r\n168\t   
+    8400\t    2x\r\n169\t    8450\t    2x\r\n170\t    8500\t    10x\r\n171\t    8550\t   
+    2x\r\n172\t    8600\t    2x\r\n173\t    8650\t    2x\r\n174\t    8700\t    2x\r\n175\t   
+    8750\t    5x\r\n176\t    8800\t    2x\r\n177\t    8850\t    2x\r\n178\t    8900\t   
+    2x\r\n179\t    8950\t    2x\r\n180\t    9000\t    10x\r\n181\t    9050\t    2x\r\n182\t   
+    9100\t    2x\r\n183\t    9150\t    2x\r\n184\t    9200\t    2x\r\n185\t    9250\t   
+    5x\r\n186\t    9300\t    2x\r\n187\t    9350\t    2x\r\n188\t    9400\t    2x\r\n189\t   
+    9450\t    2x\r\n190\t    9500\t    10x\r\n191\t    9550\t    2x\r\n192\t    9600\t   
+    2x\r\n193\t    9650\t    2x\r\n194\t    9700\t    2x\r\n195\t    9750\t    5x\r\n196\t   
+    9800\t    2x\r\n197\t    9850\t    2x\r\n198\t    9900\t    2x\r\n199\t    9950\t   
+    2x\r\n200\t    10000    250x\nMore to come :D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9719,14 +9781,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Update 1.0\r\n- Added 6 MonkiHands & Monki Workers.\r\n- Added help section
-    to Main Menu.\r\n- Added Prefixes & a prefix log.\r\n- Milestones, so you can
-    produce more bananas.\r\n\r\n\r\nUpdate 1.1\r\n- Added an autosave feature.\r\n-
-    Added 6 more Monki Hands &  Monki Workers\r\n\r\nUpdate 1.2\r\n- Added an idle
-    cash feature.\r\n- Added local upgrades tab\r\n     - hand upgrades\r\n     -
-    Monki upgrades\r\n     - Hand Cost Deduction\r\n     - Monki Cost Deduction\r\n    
+  m_text: "Update 1.0 - Main\n- Added 6 MonkiHands & Monki Workers.\r\n- Added help
+    section to Main Menu.\r\n- Added Prefixes & a prefix log.\r\n- Milestones, so
+    you can produce more bananas.\r\n\r\n\r\nUpdate 1.1 - Saving\n- Added an autosave
+    feature.\r\n- Added 6 more Monki Hands &  Monki Workers\r\n\r\nUpdate 1.2 - Upgrades\n-
+    Added an idle cash feature.\r\n- Added local upgrades tab\r\n     - hand upgrades\r\n    
+    - Monki upgrades\r\n     - Hand Cost Deduction\r\n     - Monki Cost Deduction\r\n    
     - Global Shop Upgrade\r\n\r\n- Revamped text displaying\r\n- Added a reset button\r\n-
-    Fixed UI bug\r\n- Fixed Banana Particle Speed in Main Menu\r\n- Other bug fixes"
+    Fixed UI bug\r\n- Fixed Banana Particle Speed in Main Menu\r\n- Other bug fixes\n\n\nUpadate
+    1.3 - Prestige\n- Added a Prestige Currency\n- Added a Prestige System\n- Added
+    a Prestige Multiplier to the Bananas\n- Added Current Play Time\n- Doubled the
+    milestones from 5000 -> 10000"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

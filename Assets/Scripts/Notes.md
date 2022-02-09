@@ -1,5 +1,13 @@
+Notes:
+
+
+
+
+
+
 Bugs:
-Current bugs fixed.
+Cost is still broken when you get to 5000, it just stops working for some reason. when it goes over vgn.
+^^ to fix this bug try checking the way the cost is caluclated. do some more testing.
 
 
 
@@ -7,8 +15,8 @@ Future Updates:
 
 prestige Update:
 
-Add a prestige system
-Add a prestige currency
+Add a prestige system   - done
+Add a prestige currency - done
 Add Some Prestige upgrades
 
 Database update:

@@ -11,6 +11,7 @@ public class MKMonkis : MonoBehaviour
     public BananaPrefix prefix;  //Links the Prefix script to this
     public Milestones miles;    // for the milestones   
     public AmountsLoop AL;   // for the amount multiples
+    public Prestige p; // for the Prestige script
 
 
     public double totalBPS;     // total amount of BPS
@@ -91,18 +92,18 @@ public class MKMonkis : MonoBehaviour
 
         //decalares the hand varibles
         //(name, cost, amount, initalcost, costMultiplier, production, txtHandCount, txtHandCost)
-        monkis[0] = new MKArrayClass.MKHands("Marmocets", OriginalMonkisCost[0], 0, OriginalMonkisCost[0],mult, 5, txtMonkiCount1, txtMonkiCost1, txtProduction1);
-        monkis[1] = new MKArrayClass.MKHands("Capuchin", OriginalMonkisCost[1], 0, OriginalMonkisCost[1],mult, 100, txtMonkiCount2, txtMonkiCost2, txtProduction2);   
-        monkis[2] = new MKArrayClass.MKHands("Bonobo", OriginalMonkisCost[2], 0, OriginalMonkisCost[2],mult, 1e4, txtMonkiCount3, txtMonkiCost3, txtProduction3);   
-        monkis[3] = new MKArrayClass.MKHands("Orangutan", OriginalMonkisCost[3], 0, OriginalMonkisCost[3],mult, 5e5, txtMonkiCount4, txtMonkiCost4, txtProduction4);   
-        monkis[4] = new MKArrayClass.MKHands("Baboon", OriginalMonkisCost[4], 0, OriginalMonkisCost[4],mult, 5e7, txtMonkiCount5, txtMonkiCost5, txtProduction5);   
-        monkis[5] = new MKArrayClass.MKHands("Chimpanzee", OriginalMonkisCost[5], 0, OriginalMonkisCost[5],mult, 1e9, txtMonkiCount6, txtMonkiCost6, txtProduction6);   
-        monkis[6] = new MKArrayClass.MKHands("Mandrill", OriginalMonkisCost[6], 0, OriginalMonkisCost[6],mult, 7.5e9, txtMonkiCount7, txtMonkiCost7, txtProduction7);
-        monkis[7] = new MKArrayClass.MKHands("Gelada", OriginalMonkisCost[7], 0, OriginalMonkisCost[7],mult, 1e12, txtMonkiCount8, txtMonkiCost8, txtProduction8);   
-        monkis[8] = new MKArrayClass.MKHands("Gorilla", OriginalMonkisCost[8], 0, OriginalMonkisCost[8],mult, 1e15, txtMonkiCount9, txtMonkiCost9, txtProduction9);   
-        monkis[9] = new MKArrayClass.MKHands("Homo Habilis", OriginalMonkisCost[9], 0, OriginalMonkisCost[9],mult, 1e17, txtMonkiCount10, txtMonkiCost10, txtProduction10);   
-        monkis[10] = new MKArrayClass.MKHands("Homo Erectus", OriginalMonkisCost[10], 0, OriginalMonkisCost[10],mult, 1e19, txtMonkiCount11, txtMonkiCost11, txtProduction11);   
-        monkis[11] = new MKArrayClass.MKHands("Homo Sapian", OriginalMonkisCost[11], 0, OriginalMonkisCost[11],mult, 1e21, txtMonkiCount12, txtMonkiCost12, txtProduction12);  
+        monkis[0] = new MKArrayClass.MKHands("Marmocets", OriginalMonkisCost[0], 0, OriginalMonkisCost[0],mult, 5, 5, txtMonkiCount1, txtMonkiCost1, txtProduction1);
+        monkis[1] = new MKArrayClass.MKHands("Capuchin", OriginalMonkisCost[1], 0, OriginalMonkisCost[1],mult, 100, 100, txtMonkiCount2, txtMonkiCost2, txtProduction2);   
+        monkis[2] = new MKArrayClass.MKHands("Bonobo", OriginalMonkisCost[2], 0, OriginalMonkisCost[2],mult, 1e4, 1e4, txtMonkiCount3, txtMonkiCost3, txtProduction3);   
+        monkis[3] = new MKArrayClass.MKHands("Orangutan", OriginalMonkisCost[3], 0, OriginalMonkisCost[3],mult, 5e5, 5e5, txtMonkiCount4, txtMonkiCost4, txtProduction4);   
+        monkis[4] = new MKArrayClass.MKHands("Baboon", OriginalMonkisCost[4], 0, OriginalMonkisCost[4],mult, 5e7, 5e7, txtMonkiCount5, txtMonkiCost5, txtProduction5);   
+        monkis[5] = new MKArrayClass.MKHands("Chimpanzee", OriginalMonkisCost[5], 0, OriginalMonkisCost[5],mult, 1e9, 1e9, txtMonkiCount6, txtMonkiCost6, txtProduction6);   
+        monkis[6] = new MKArrayClass.MKHands("Mandrill", OriginalMonkisCost[6], 0, OriginalMonkisCost[6],mult, 7.5e9, 7.5e9, txtMonkiCount7, txtMonkiCost7, txtProduction7);
+        monkis[7] = new MKArrayClass.MKHands("Gelada", OriginalMonkisCost[7], 0, OriginalMonkisCost[7],mult, 1e12, 1e12, txtMonkiCount8, txtMonkiCost8, txtProduction8);   
+        monkis[8] = new MKArrayClass.MKHands("Gorilla", OriginalMonkisCost[8], 0, OriginalMonkisCost[8],mult, 1e15, 1e15, txtMonkiCount9, txtMonkiCost9, txtProduction9);   
+        monkis[9] = new MKArrayClass.MKHands("Homo Habilis", OriginalMonkisCost[9], 0, OriginalMonkisCost[9],mult, 1e17, 1e17, txtMonkiCount10, txtMonkiCost10, txtProduction10);   
+        monkis[10] = new MKArrayClass.MKHands("Homo Erectus", OriginalMonkisCost[10], 0, OriginalMonkisCost[10],mult, 1e19, 1e19, txtMonkiCount11, txtMonkiCost11, txtProduction11);   
+        monkis[11] = new MKArrayClass.MKHands("Homo Sapian", OriginalMonkisCost[11], 0, OriginalMonkisCost[11],mult, 1e21, 1e21, txtMonkiCount12, txtMonkiCost12, txtProduction12);  
     }
     void Update()
     {
@@ -193,11 +194,11 @@ public class MKMonkis : MonoBehaviour
     private void buy1(int x){
         if(main.bananas >= monkis[x].cost){
             main.bananas -= monkis[x].cost;
-            totalBPS += monkis[x].productionPerClick;
+            totalBPS += monkis[x].HMProduction;
             monkis[x].count += 1;
             monkis[x].cost = monkis[x].initialCost * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count) / (5000))), monkis[x].count));
-
             monkis[x].productionPerClick = miles.milesStoness(monkis[x].count, monkis[x].productionPerClick);
+            monkis[x].HMProduction = monkis[x].productionPerClick * (1 + (p.Intelligence * (p.Prestige_Multi /100)));
         }
     }
 
@@ -218,10 +219,12 @@ public class MKMonkis : MonoBehaviour
         if(main.bananas >= temp){
             for (int i = 0;i <= 9; i++){
                 main.bananas -= monkis[x].cost;
-                totalBPS += monkis[x].productionPerClick;
+                totalBPS += monkis[x].HMProduction;
                 monkis[x].count += 1;
                 monkis[x].cost = monkis[x].initialCost * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count) / (5000))), monkis[x].count));
                 monkis[x].productionPerClick = miles.milesStoness(monkis[x].count, monkis[x].productionPerClick);
+                monkis[x].HMProduction = monkis[x].productionPerClick * (1 + (p.Intelligence * (p.Prestige_Multi /100)));
+
             }
         }
 
@@ -245,10 +248,12 @@ public class MKMonkis : MonoBehaviour
         if(main.bananas >= temp){
             for (int i = 0;i <= 99; i++){
                 main.bananas -= monkis[x].cost;
-                totalBPS += monkis[x].productionPerClick;
+                totalBPS += monkis[x].HMProduction;
                 monkis[x].count += 1;
                 monkis[x].cost = monkis[x].initialCost * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count) / (5000))), monkis[x].count));
                 monkis[x].productionPerClick = miles.milesStoness(monkis[x].count, monkis[x].productionPerClick);
+                monkis[x].HMProduction = monkis[x].productionPerClick * (1 + (p.Intelligence * (p.Prestige_Multi /100)));
+
             }
         }
 

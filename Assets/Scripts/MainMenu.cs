@@ -33,6 +33,13 @@ public class MainMenu : MonoBehaviour
         dataDir.Delete(true); 
     }
 
+    public void btnPrestige(){
+        string filePath = Application.persistentDataPath + "/PlayTime.json";
+        File.Delete(filePath);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1); // changes from main menu to the actual game.
+
+    }
+
 
 
 

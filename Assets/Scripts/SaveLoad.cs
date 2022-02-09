@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ public class SaveLoad : MonoBehaviour
     public MKHands Hand;    // links the MKHands script to this file.
     public MKMonkis Monki;  // links the MKMonki script to this file.
     public IdleAway IA;
+    public Prestige p;
 
     public BananaUpgrades BananaUpgr; // links the bananaupgrades to this file.
 
@@ -24,6 +26,7 @@ public class SaveLoad : MonoBehaviour
         //if(main.bananas != 0 && main.BPC != 1){
         Load();
         IA.load(); // loads the Idle time file.
+        p.load(); // loads the prestige file.
         //}
         
     }
@@ -174,17 +177,22 @@ public class SaveLoad : MonoBehaviour
         try{
             string saveString = File.ReadAllText(Application.persistentDataPath + "/save.json");  //reads all of the data from the file
             string[] contents; // initilises string
-            contents = new string[80];  // declares the string
+            contents = new string[100];  // declares the string
             contents = saveString.Split(new[] { SAVESEPERATOR }, System.StringSplitOptions.None); // splits all of the data into the strings so that it can be parsed.
             //Debug.Log(Application.persistentDataPath);
 
             // assigning the values to the varibles from the array list:
-            //main data
+            
+                //main data
             main.bananas = double.Parse(contents[0], CultureInfo.InvariantCulture);
             main.BPC = double.Parse(contents[1], CultureInfo.InvariantCulture);
             main.BPS = double.Parse(contents[2], CultureInfo.InvariantCulture);
             Hand.totalBPC = double.Parse(contents[3], CultureInfo.InvariantCulture);
             Monki.totalBPS = double.Parse(contents[4], CultureInfo.InvariantCulture);
+
+            
+            
+        
 
             //monki Hands
 

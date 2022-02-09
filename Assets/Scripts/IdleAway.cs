@@ -40,7 +40,6 @@ public class IdleAway : MonoBehaviour
         string[] contents = new string[]{
             ""+dt.ToString(),
             ""+main.BPS.ToString()
-
         };
         string saveString = string.Join(SAVESEPERATOR, contents);
         File.WriteAllText(Application.persistentDataPath + "/Idle.json", saveString); // saved to a file with a seprator which makes it easier to load the individuak varuibles.

@@ -31,6 +31,7 @@ public class AmountsLoop : MonoBehaviour
     public MKHands Hand;    // links the MKHands script to this file.
     public MKMonkis Monki;  // links to the MKMonkis script.
     public BananaPrefix prefix;  //Links the Prefix script to this
+    public Prestige p; // links to the Prestige to this script.
 
     public int CycleNo; // number that has the equivalent of the amount that needs to be bought. 1 = 1x, 2 = 10x, 3 = 100x.
 
@@ -106,13 +107,17 @@ public class AmountsLoop : MonoBehaviour
     public void txtXone(){ // this is the method that displays the text for 1x, it's simple and no calculations are needed.
         for (int i = 0; i <= 11; i++) // loops through all 12 shops, means their is no code repeated.
         {
+            Hand.Hands[i].HMProduction = Hand.Hands[i].productionPerClick * (1 + (p.Intelligence * (p.Prestige_Multi /100)));
+            Monki.monkis[i].HMProduction = Monki.monkis[i].productionPerClick * (1 + (p.Intelligence * (p.Prestige_Multi /100)));
+
+
             Hand.Hands[i].costText.text = "Cost: " + prefix.Suffix(Hand.Hands[i].cost, "0.0", false) + " Bananas";
             Hand.Hands[i].countText.text = Hand.Hands[i].count.ToString("0");
-            Hand.Hands[i].productionText.text = "+ " + prefix.Suffix(Hand.Hands[i].productionPerClick, "0.0", false) + " BPC";
+            Hand.Hands[i].productionText.text = "+ " + prefix.Suffix(Hand.Hands[i].HMProduction, "0.0", false) + " BPC";
 
             Monki.monkis[i].costText.text = "Cost: " + prefix.Suffix(Monki.monkis[i].cost, "0.0", false) + " Bananas";
             Monki.monkis[i].countText.text = Monki.monkis[i].count.ToString("0");
-            Monki.monkis[i].productionText.text = "+ " + prefix.Suffix(Monki.monkis[i].productionPerClick, "0.0", false) + " BPS";
+            Monki.monkis[i].productionText.text = "+ " + prefix.Suffix(Monki.monkis[i].HMProduction, "0.0", false) + " BPS";
         }
     }
 
@@ -129,13 +134,16 @@ public class AmountsLoop : MonoBehaviour
             double mTemp1;
             double mTemp2 = 0;
 
+            Hand.Hands[x].HMProduction = Hand.Hands[x].productionPerClick * (1 + (p.Intelligence * (p.Prestige_Multi /100)));
+            Monki.monkis[x].HMProduction = Monki.monkis[x].productionPerClick * (1 + (p.Intelligence * (p.Prestige_Multi /100)));
+
             for (int i = 0;i <= 9; i++){ // this for for statement loops 10 times, which will give temp values of the shop costs and production
                 //hands
-                temp2 += Hand.Hands[x].productionPerClick; 
+                temp2 += Hand.Hands[x].HMProduction; 
                 temp1 = Hand.Hands[x].initialCost * (Math.Pow((1 + (Hand.Hands[x].costMultiplier) / (1 + (Hand.Hands[x].count + i) / (5000))), Hand.Hands[x].count + i));
                 temp +=temp1;
                 //monkis
-                mTemp2 += Monki.monkis[x].productionPerClick;
+                mTemp2 += Monki.monkis[x].HMProduction;
                 mTemp1 = Monki.monkis[x].initialCost * (Math.Pow((1 + (Monki.monkis[x].costMultiplier) / (1 + (Monki.monkis[x].count + i) / (5000))), Monki.monkis[x].count + i));
                 mTemp += mTemp1;
 
@@ -173,14 +181,17 @@ public class AmountsLoop : MonoBehaviour
             double mTemp1;
             double mTemp2 = 0;
 
+            Hand.Hands[x].HMProduction = Hand.Hands[x].productionPerClick * (1 + (p.Intelligence * (p.Prestige_Multi /100)));
+            Monki.monkis[x].HMProduction = Monki.monkis[x].productionPerClick * (1 + (p.Intelligence * (p.Prestige_Multi /100)));
+
             // once the temp values are created, it updates the text values for 10x.
             for (int i = 0;i <= 99; i++){   
                 //hands
-                temp2 += Hand.Hands[x].productionPerClick;
+                temp2 += Hand.Hands[x].HMProduction;
                 temp1 = Hand.Hands[x].initialCost * (Math.Pow((1 + (Hand.Hands[x].costMultiplier) / (1 + (Hand.Hands[x].count + i) / (5000))), Hand.Hands[x].count + i));
                 temp +=temp1;
                 //monkis
-                mTemp2 += Monki.monkis[x].productionPerClick;
+                mTemp2 += Monki.monkis[x].HMProduction;
                 mTemp1 = Monki.monkis[x].initialCost * (Math.Pow((1 + (Monki.monkis[x].costMultiplier) / (1 + (Monki.monkis[x].count + i) / (5000))), Monki.monkis[x].count + i));
                 mTemp += mTemp1;
 

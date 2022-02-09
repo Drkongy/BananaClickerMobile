@@ -21,6 +21,7 @@ public class MKHands : MonoBehaviour
     public BananaPrefix prefix;  //Links the Prefix script to this
     public Milestones miles;    // for the milestones
     public AmountsLoop AL;   // for the amount multiples
+    public Prestige p; // for getting prestige values
 
 
 
@@ -110,19 +111,19 @@ public class MKHands : MonoBehaviour
 
 
         //decalares the hand varibles
-        //(name, cost, amount, initialCost ,  costMultiplier, production, txtHandCount, txtHandCost)
-        Hands[0] = new MKArrayClass.MKHands("Wooden", OriginalHandsCost[0], 1, OriginalHandsCost[0], mult, 1, txtHandCount1, txtHandCost1, txtProduction1);   
-        Hands[1] = new MKArrayClass.MKHands("Stone", OriginalHandsCost[1], 0, OriginalHandsCost[1], mult, 10, txtHandCount2, txtHandCost2, txtProduction2);
-        Hands[2] = new MKArrayClass.MKHands("Coal", OriginalHandsCost[2], 0, OriginalHandsCost[2],mult, 500, txtHandCount3, txtHandCost3, txtProduction3);
-        Hands[3] = new MKArrayClass.MKHands("Iron", OriginalHandsCost[3], 0, OriginalHandsCost[3],mult, 10000, txtHandCount4, txtHandCost4, txtProduction4);
-        Hands[4] = new MKArrayClass.MKHands("Gold", OriginalHandsCost[4], 0, OriginalHandsCost[4],mult, 5e6, txtHandCount5, txtHandCost5, txtProduction5);
-        Hands[5] = new MKArrayClass.MKHands("Diamond", OriginalHandsCost[5], 0, OriginalHandsCost[5],mult, 2.5e7, txtHandCount6, txtHandCost6, txtProduction6);
-        Hands[6] = new MKArrayClass.MKHands("Emerald", OriginalHandsCost[6], 0, OriginalHandsCost[6],mult, 1e9f, txtHandCount7, txtHandCost7, txtProduction7);   
-        Hands[7] = new MKArrayClass.MKHands("Ruby", OriginalHandsCost[7], 0, OriginalHandsCost[7],mult, 5e11f, txtHandCount8, txtHandCost8, txtProduction8);
-        Hands[8] = new MKArrayClass.MKHands("Saphire", OriginalHandsCost[8], 0, OriginalHandsCost[8],mult, 2.5e13f, txtHandCount9, txtHandCost9, txtProduction9);
-        Hands[9] = new MKArrayClass.MKHands("Void", OriginalHandsCost[9], 0, OriginalHandsCost[9],mult, 1e15f, txtHandCount10, txtHandCost10, txtProduction10);
-        Hands[10] = new MKArrayClass.MKHands("Rainbownite", OriginalHandsCost[10], 0, OriginalHandsCost[10],mult, 2.5e20f, txtHandCount11, txtHandCost11, txtProduction11);
-        Hands[11] = new MKArrayClass.MKHands("BlackStone", OriginalHandsCost[11], 0, OriginalHandsCost[11],mult, 1e22f, txtHandCount12, txtHandCost12, txtProduction12);
+        //(name, cost, amount, initialCost ,  costMultiplier, production, HMProduction, txtHandCount, txtHandCost)
+        Hands[0] = new MKArrayClass.MKHands("Wooden", OriginalHandsCost[0], 1, OriginalHandsCost[0], mult, 1, 1, txtHandCount1, txtHandCost1, txtProduction1);   
+        Hands[1] = new MKArrayClass.MKHands("Stone", OriginalHandsCost[1], 0, OriginalHandsCost[1], mult, 10, 10, txtHandCount2, txtHandCost2, txtProduction2);
+        Hands[2] = new MKArrayClass.MKHands("Coal", OriginalHandsCost[2], 0, OriginalHandsCost[2],mult, 500, 500, txtHandCount3, txtHandCost3, txtProduction3);
+        Hands[3] = new MKArrayClass.MKHands("Iron", OriginalHandsCost[3], 0, OriginalHandsCost[3],mult, 10000, 10000, txtHandCount4, txtHandCost4, txtProduction4);
+        Hands[4] = new MKArrayClass.MKHands("Gold", OriginalHandsCost[4], 0, OriginalHandsCost[4],mult, 5e6, 5e6, txtHandCount5, txtHandCost5, txtProduction5);
+        Hands[5] = new MKArrayClass.MKHands("Diamond", OriginalHandsCost[5], 0, OriginalHandsCost[5],mult, 2.5e7, 2.5e7, txtHandCount6, txtHandCost6, txtProduction6);
+        Hands[6] = new MKArrayClass.MKHands("Emerald", OriginalHandsCost[6], 0, OriginalHandsCost[6],mult, 1e9f, 1e9f, txtHandCount7, txtHandCost7, txtProduction7);   
+        Hands[7] = new MKArrayClass.MKHands("Ruby", OriginalHandsCost[7], 0, OriginalHandsCost[7],mult, 5e11f,  5e11f,txtHandCount8, txtHandCost8, txtProduction8);
+        Hands[8] = new MKArrayClass.MKHands("Saphire", OriginalHandsCost[8], 0, OriginalHandsCost[8],mult, 2.5e13f,  2.5e13f,txtHandCount9, txtHandCost9, txtProduction9);
+        Hands[9] = new MKArrayClass.MKHands("Void", OriginalHandsCost[9], 0, OriginalHandsCost[9],mult, 1e15f,  1e15f, txtHandCount10, txtHandCost10, txtProduction10);
+        Hands[10] = new MKArrayClass.MKHands("Rainbownite", OriginalHandsCost[10], 0, OriginalHandsCost[10],mult, 2.5e20f, 2.5e20f, txtHandCount11, txtHandCost11, txtProduction11);
+        Hands[11] = new MKArrayClass.MKHands("BlackStone", OriginalHandsCost[11], 0, OriginalHandsCost[11],mult, 1e22f, 1e22f, txtHandCount12, txtHandCost12, txtProduction12);
 
 
 
@@ -239,11 +240,12 @@ public class MKHands : MonoBehaviour
     private void buy1(int x){
         if(main.bananas >= Hands[x].cost){
             main.bananas -= Hands[x].cost;
-            totalBPC += Hands[x].productionPerClick;
+            totalBPC += Hands[x].HMProduction;
             Hands[x].count += 1;
             Hands[x].cost = Hands[x].initialCost * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count) / (5000))), Hands[x].count));
-
             Hands[x].productionPerClick = miles.milesStoness(Hands[x].count, Hands[x].productionPerClick);
+            Hands[x].HMProduction = Hands[x].productionPerClick * (1 + (p.Intelligence * (p.Prestige_Multi /100)));
+
         }
 
     }
@@ -264,10 +266,12 @@ public class MKHands : MonoBehaviour
         if(main.bananas >= temp){
             for (int i = 0;i <= 9; i++){
                 main.bananas -= Hands[x].cost;
-                totalBPC += Hands[x].productionPerClick;
+                totalBPC += Hands[x].HMProduction;
                 Hands[x].count += 1;
                 Hands[x].cost = Hands[x].initialCost * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count) / (5000))), Hands[x].count));
                 Hands[x].productionPerClick = miles.milesStoness(Hands[x].count, Hands[x].productionPerClick);
+                Hands[x].HMProduction = Hands[x].productionPerClick * (1 + (p.Intelligence * (p.Prestige_Multi /100)));
+
                 
             }
         }
@@ -291,10 +295,12 @@ public class MKHands : MonoBehaviour
         if(main.bananas >= temp){
             for (int i = 0;i <= 99; i++){
                 main.bananas -= Hands[x].cost;
-                totalBPC += Hands[x].productionPerClick;
+                totalBPC += Hands[x].HMProduction;
                 Hands[x].count += 1;
                 Hands[x].cost = Hands[x].initialCost * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count) / (5000))), Hands[x].count));
                 Hands[x].productionPerClick = miles.milesStoness(Hands[x].count, Hands[x].productionPerClick);
+                Hands[x].HMProduction = Hands[x].productionPerClick * (1 + (p.Intelligence * (p.Prestige_Multi /100)));
+
             }
         }
 

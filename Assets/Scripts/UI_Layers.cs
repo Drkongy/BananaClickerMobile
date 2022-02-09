@@ -9,23 +9,34 @@ public class UI_Layers : MonoBehaviour
     public GameObject Hands;
     public GameObject Monkis;
     public GameObject Upgrades;
+    public GameObject Prestige;
+
 
     // the collider.tag method checks the tag of the collider, so when it's inside of the rigid body the if statement will be specific to the collider and the tag.
     private void OnTriggerEnter2D(Collider2D collider) {
         if(collider.tag == "Hands"){
             Monkis.SetActive(false); 
             Upgrades.SetActive(false);
+            Prestige.SetActive(false);
         }
 
         if(collider.tag == "Monkis"){
             Hands.SetActive(false);
             Upgrades.SetActive(false);
+            Prestige.SetActive(false);
         }
         
 
         if(collider.tag == "Upgrades"){
             Hands.SetActive(false);
-            Monkis.SetActive(false);            
+            Monkis.SetActive(false);
+            Prestige.SetActive(false);        
+        }
+
+        if(collider.tag == "Prestige"){
+            Hands.SetActive(false);
+            Monkis.SetActive(false);
+            Upgrades.SetActive(false);        
         }
     }
 
@@ -36,14 +47,7 @@ public class UI_Layers : MonoBehaviour
         Hands.SetActive(true);
         Monkis.SetActive(true);
         Upgrades.SetActive(true);
+        Prestige.SetActive(true);
     }
-
-
-
-    
-
-
-
-    
 
 }

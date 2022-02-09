@@ -398,7 +398,7 @@ public class BananaUpgrades : MonoBehaviour
 
 
         if(x == 5){
-            for(int i = 0; i <= 911; i++){
+            for(int i = 0; i <= 11; i++){
                 Hand.Hands[i].productionPerClick *= 2;
             }}
         if(x == 6){

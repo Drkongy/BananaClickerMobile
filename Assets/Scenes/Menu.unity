@@ -5621,8 +5621,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.85510254, y: -1491.8197}
-  m_SizeDelta: {x: 0, y: 2983.6401}
+  m_AnchoredPosition: {x: 0.056396484, y: -98.37622}
+  m_SizeDelta: {x: 0, y: 196.7529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1037366785
 MonoBehaviour:
@@ -5644,14 +5644,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "prestige Update:\r\n\r\n- Add a prestige system\r\n- Add a prestige currency\r\n-
-    Add Some Prestige upgrades\r\n\r\nDatabase update:\r\n- Make a data base for
-    all the users that play\r\n- make an id of them\r\n- make a leaderboard of top
-    Bananas\r\n- setup anti-cheat\n\r\n\r\nStats update:\r\n- Make a stats tab that
-    records all of the players Stats\r\n- Add customized settings\n- Add some music\r\n-
-    Add a way to change the main prefix\r \n\r\ncase update:\r\n\r\n- Make a case
-    tab\n- Make some cool items / clothing that give a global multiplier\n- make
-    cases which can be bought with a new currency!"
+  m_text: "Managers update\n\r- Add managers shop which allow you to buy a manager
+    for each of the Stalls\n- Autobuys stalls. \n- Upgrade the manager so you can
+    buy more stalls.\n\nDatabase update:\r\n- Make a data base for all the users
+    that play\r\n- make an id of them\r\n- make a leaderboard of top Bananas\r\n-
+    setup anti-cheat\n\r\n\r\nStats update:\r\n- Make a stats tab that records all
+    of the players Stats\r\n- Add customized settings\n- Add some music\r\n- Add
+    a way to change the main prefix\n\nUI revamp Update:\r\n- Revamp the entire ui,
+    make it look 10x cleaner\r\n- add small animations to make it looks more lively\r\n-
+    different image for items that player can't afford.\n\r\ncase update:\r\n\r\n-
+    Make a case tab\n- Make some cool items / clothing that give a global multiplier\n-
+    make cases which can be bought with a new currency!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9316,8 +9319,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.18960571, y: -330.9189}
-  m_SizeDelta: {x: 0, y: 661.8381}
+  m_AnchoredPosition: {x: 0.18009949, y: -314.29086}
+  m_SizeDelta: {x: 0, y: 628.582}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1815175790
 MonoBehaviour:
@@ -9374,7 +9377,12 @@ MonoBehaviour:
 
     Prestiging - restarting from scratch, but you get
     a new currency that allows you to progress much further into the game. Get a
-    much higher Banana Count.'
+    much higher Banana Count.
+
+
+    Prestige Upgrades - Buy upgrades to enhance you
+    banana making experience. Get back to where you was faster. Aswell as gain various
+    boosts.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9401,7 +9409,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.95
+  m_fontSize: 28
   m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9758,8 +9766,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.85510254, y: -1491.8197}
-  m_SizeDelta: {x: 0, y: 2983.6401}
+  m_AnchoredPosition: {x: 0.21130371, y: -368.6048}
+  m_SizeDelta: {x: 0, y: 737.2095}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1958251044
 MonoBehaviour:
@@ -9788,10 +9796,15 @@ MonoBehaviour:
     Added an idle cash feature.\r\n- Added local upgrades tab\r\n     - hand upgrades\r\n    
     - Monki upgrades\r\n     - Hand Cost Deduction\r\n     - Monki Cost Deduction\r\n    
     - Global Shop Upgrade\r\n\r\n- Revamped text displaying\r\n- Added a reset button\r\n-
-    Fixed UI bug\r\n- Fixed Banana Particle Speed in Main Menu\r\n- Other bug fixes\n\n\nUpadate
-    1.3 - Prestige\n- Added a Prestige Currency\n- Added a Prestige System\n- Added
-    a Prestige Multiplier to the Bananas\n- Added Current Play Time\n- Doubled the
-    milestones from 5000 -> 10000"
+    Fixed UI bug\r\n- Fixed Banana Particle Speed in Main Menu\r\n- Other bug fixes\n\n\nUpdate
+    1.3 - Prestige v1\n- Added a Prestige Currency\n- Added a Prestige System\n-
+    Added a Prestige Multiplier to the Bananas\n- Added Current Play Time\n- Doubled
+    the milestones from 5000 -> 10000\n\nUpdate 1.4 - Prestige v2\n- Added a Prestige
+    shop\n- Automatically buy 100 of each shops\n- Gain huge money Boosts\n- Increase
+    the prestige multiplier\n- nerfed the prestige formula so that it isnt OP\n-
+    Fixed huge bug that broke the money of a shops cost past 5000 shops owned\n-
+    Optimized the cpde so it runs faster.\n- UI Tweekings\n- Small changes & bug
+    fixes\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

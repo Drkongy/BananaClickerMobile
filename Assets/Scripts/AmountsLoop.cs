@@ -140,11 +140,11 @@ public class AmountsLoop : MonoBehaviour
             for (int i = 0;i <= 9; i++){ // this for for statement loops 10 times, which will give temp values of the shop costs and production
                 //hands
                 temp2 += Hand.Hands[x].HMProduction; 
-                temp1 = Hand.Hands[x].initialCost * (Math.Pow((1 + (Hand.Hands[x].costMultiplier) / (1 + (Hand.Hands[x].count + i) / (5000))), Hand.Hands[x].count + i));
+                temp1 = Hand.Hands[x].initialCost * (Math.Pow((1 + (Hand.Hands[x].costMultiplier) / (1 + (Hand.Hands[x].count + i) / (1000000000))), Hand.Hands[x].count + i));
                 temp +=temp1;
                 //monkis
                 mTemp2 += Monki.monkis[x].HMProduction;
-                mTemp1 = Monki.monkis[x].initialCost * (Math.Pow((1 + (Monki.monkis[x].costMultiplier) / (1 + (Monki.monkis[x].count + i) / (5000))), Monki.monkis[x].count + i));
+                mTemp1 = Monki.monkis[x].initialCost * (Math.Pow((1 + (Monki.monkis[x].costMultiplier) / (1 + (Monki.monkis[x].count + i) / (1000000000))), Monki.monkis[x].count + i));
                 mTemp += mTemp1;
 
 
@@ -188,11 +188,11 @@ public class AmountsLoop : MonoBehaviour
             for (int i = 0;i <= 99; i++){   
                 //hands
                 temp2 += Hand.Hands[x].HMProduction;
-                temp1 = Hand.Hands[x].initialCost * (Math.Pow((1 + (Hand.Hands[x].costMultiplier) / (1 + (Hand.Hands[x].count + i) / (5000))), Hand.Hands[x].count + i));
+                temp1 = Hand.Hands[x].initialCost * (Math.Pow((1 + (Hand.Hands[x].costMultiplier) / (1 + (Hand.Hands[x].count + i) / (1000000000))), Hand.Hands[x].count + i));
                 temp +=temp1;
                 //monkis
                 mTemp2 += Monki.monkis[x].HMProduction;
-                mTemp1 = Monki.monkis[x].initialCost * (Math.Pow((1 + (Monki.monkis[x].costMultiplier) / (1 + (Monki.monkis[x].count + i) / (5000))), Monki.monkis[x].count + i));
+                mTemp1 = Monki.monkis[x].initialCost * (Math.Pow((1 + (Monki.monkis[x].costMultiplier) / (1 + (Monki.monkis[x].count + i) / (1000000000))), Monki.monkis[x].count + i));
                 mTemp += mTemp1;
 
 

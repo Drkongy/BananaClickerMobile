@@ -23,7 +23,7 @@ public class Prestige : MonoBehaviour
 
 
     // these are the main varibles
-    private int prestige_no;     // the amount of times player has prestiged
+    public int prestige_no;     // the amount of times player has prestiged
     public double Intelligence;     // the current amout of intlligence you have
     private double futureIntelligence;       // calculation of intlligence you will have after the prestige.
     public double Prestige_Multi;   // the multiplier you will get on the shops
@@ -47,7 +47,8 @@ public class Prestige : MonoBehaviour
     void Update()
     {
         if (Time.frameCount % this.Delay != 0) return;  // makes sure that it's not updating every frame. makes sure that the game does not lag.
-        futureIntelligence = main.bananas / 1e39;
+        //futureIntelligence = main.bananas / 1e39; // old version of prestige.
+        futureIntelligence = 500 * (System.Math.Sqrt(main.bananas/1e45));
         txtFutureIntelligence.text = "You can prestige with " + prefix.Suffix(futureIntelligence, "0.00", true) + " Intelligence";
         time();
     }
@@ -55,7 +56,7 @@ public class Prestige : MonoBehaviour
 
     public void btnPrestige(){
         Debug.Log(futureIntelligence.ToString());
-        if(futureIntelligence >= 1){
+        if(futureIntelligence >= 0.5){
             Intelligence += futureIntelligence;
             prestige_no++;
             Restart();
@@ -65,7 +66,6 @@ public class Prestige : MonoBehaviour
     }
 
     public void txtUpdate(){
-        Prestige_Multi = 0.5;
         txtPrestigeNO.text = "Prestige: " + prestige_no.ToString();
         txtIntelligence.text = "Total Intelligence: " + prefix.Suffix(Intelligence, "0.00", true);
         txtPrestigeMulti.text = "% Per Intelligence \n" + Prestige_Multi.ToString() + "%";
@@ -79,20 +79,16 @@ public class Prestige : MonoBehaviour
         File.Delete(filePath);
         string filePath2 = Application.persistentDataPath + "/Idle.json";
         File.Delete(filePath2);
+        string filePath3 = Application.persistentDataPath + "/PrestigeUpgrades.json";
+        File.Delete(filePath3);
+
+
+        Prestige_Multi = 1;
+        
         save();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         
     }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -125,6 +121,7 @@ public class Prestige : MonoBehaviour
             
 
         }catch(IOException e){ // this IOException is for when the file does not exist.
+            Prestige_Multi = 1;
             Debug.Log(e);
         }
 

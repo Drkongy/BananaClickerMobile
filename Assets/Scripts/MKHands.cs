@@ -242,7 +242,7 @@ public class MKHands : MonoBehaviour
             main.bananas -= Hands[x].cost;
             totalBPC += Hands[x].HMProduction;
             Hands[x].count += 1;
-            Hands[x].cost = Hands[x].initialCost * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count) / (5000))), Hands[x].count));
+            Hands[x].cost = Hands[x].initialCost * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count) / (1000000000))), Hands[x].count));
             Hands[x].productionPerClick = miles.milesStoness(Hands[x].count, Hands[x].productionPerClick);
             Hands[x].HMProduction = Hands[x].productionPerClick * (1 + (p.Intelligence * (p.Prestige_Multi /100)));
 
@@ -256,7 +256,7 @@ public class MKHands : MonoBehaviour
         double temp1;
 
         for (int i = 0;i <= 9; i++){
-            temp1 = Hands[x].initialCost * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count + i) / (5000))), Hands[x].count + i));
+            temp1 = Hands[x].initialCost * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count + i) / (10000000000))), Hands[x].count + i));
             temp +=temp1;
         }
         
@@ -268,7 +268,7 @@ public class MKHands : MonoBehaviour
                 main.bananas -= Hands[x].cost;
                 totalBPC += Hands[x].HMProduction;
                 Hands[x].count += 1;
-                Hands[x].cost = Hands[x].initialCost * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count) / (5000))), Hands[x].count));
+                Hands[x].cost = Hands[x].initialCost * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count) / (1000000000))), Hands[x].count));
                 Hands[x].productionPerClick = miles.milesStoness(Hands[x].count, Hands[x].productionPerClick);
                 Hands[x].HMProduction = Hands[x].productionPerClick * (1 + (p.Intelligence * (p.Prestige_Multi /100)));
 
@@ -285,7 +285,7 @@ public class MKHands : MonoBehaviour
         double temp1;
 
         for (int i = 0;i <= 99; i++){
-            temp1 = Hands[x].initialCost * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count + i) / (5000))), Hands[x].count + i));
+            temp1 = Hands[x].initialCost * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count + i) / (1000000000))), Hands[x].count + i));
             temp +=temp1;
         }
         
@@ -297,7 +297,7 @@ public class MKHands : MonoBehaviour
                 main.bananas -= Hands[x].cost;
                 totalBPC += Hands[x].HMProduction;
                 Hands[x].count += 1;
-                Hands[x].cost = Hands[x].initialCost * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count) / (5000))), Hands[x].count));
+                Hands[x].cost = Hands[x].initialCost * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count) / (1000000000))), Hands[x].count));
                 Hands[x].productionPerClick = miles.milesStoness(Hands[x].count, Hands[x].productionPerClick);
                 Hands[x].HMProduction = Hands[x].productionPerClick * (1 + (p.Intelligence * (p.Prestige_Multi /100)));
 
@@ -308,7 +308,7 @@ public class MKHands : MonoBehaviour
     }
 
     public void iniUpdate(int x){
-        Hands[x].cost = Hands[x].initialCost * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count) / (5000))), Hands[x].count + 1));
+        Hands[x].cost = Hands[x].initialCost * (Math.Pow((1 + (Hands[x].costMultiplier) / (1 + (Hands[x].count) / (1000000000))), Hands[x].count + 1));
         // this goes with the hand cost deduction upgrade, it will not work without this, same with the method below!
         // this links to the monkis cost deduction upgrade, without this the text will not update instantly.
     

@@ -196,7 +196,7 @@ public class MKMonkis : MonoBehaviour
             main.bananas -= monkis[x].cost;
             totalBPS += monkis[x].HMProduction;
             monkis[x].count += 1;
-            monkis[x].cost = monkis[x].initialCost * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count) / (5000))), monkis[x].count));
+            monkis[x].cost = monkis[x].initialCost * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count) / (1000000000))), monkis[x].count));
             monkis[x].productionPerClick = miles.milesStoness(monkis[x].count, monkis[x].productionPerClick);
             monkis[x].HMProduction = monkis[x].productionPerClick * (1 + (p.Intelligence * (p.Prestige_Multi /100)));
         }
@@ -209,7 +209,7 @@ public class MKMonkis : MonoBehaviour
         double temp1;
 
         for (int i = 0;i <= 9; i++){
-            temp1 = monkis[x].initialCost * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count + i) / (5000))), monkis[x].count + i));
+            temp1 = monkis[x].initialCost * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count + i) / (1000000000))), monkis[x].count + i));
             temp +=temp1;
         }
         
@@ -221,7 +221,7 @@ public class MKMonkis : MonoBehaviour
                 main.bananas -= monkis[x].cost;
                 totalBPS += monkis[x].HMProduction;
                 monkis[x].count += 1;
-                monkis[x].cost = monkis[x].initialCost * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count) / (5000))), monkis[x].count));
+                monkis[x].cost = monkis[x].initialCost * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count) / (1000000000))), monkis[x].count));
                 monkis[x].productionPerClick = miles.milesStoness(monkis[x].count, monkis[x].productionPerClick);
                 monkis[x].HMProduction = monkis[x].productionPerClick * (1 + (p.Intelligence * (p.Prestige_Multi /100)));
 
@@ -238,7 +238,7 @@ public class MKMonkis : MonoBehaviour
         double temp1;
 
         for (int i = 0;i <= 99; i++){
-            temp1 = monkis[x].initialCost * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count + i) / (5000))), monkis[x].count + i));
+            temp1 = monkis[x].initialCost * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count + i) / (1000000000))), monkis[x].count + i));
             temp +=temp1;
         }
         
@@ -250,7 +250,7 @@ public class MKMonkis : MonoBehaviour
                 main.bananas -= monkis[x].cost;
                 totalBPS += monkis[x].HMProduction;
                 monkis[x].count += 1;
-                monkis[x].cost = monkis[x].initialCost * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count) / (5000))), monkis[x].count));
+                monkis[x].cost = monkis[x].initialCost * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count) / (1000000000))), monkis[x].count));
                 monkis[x].productionPerClick = miles.milesStoness(monkis[x].count, monkis[x].productionPerClick);
                 monkis[x].HMProduction = monkis[x].productionPerClick * (1 + (p.Intelligence * (p.Prestige_Multi /100)));
 
@@ -261,7 +261,7 @@ public class MKMonkis : MonoBehaviour
     }
 
     public void iniUpdate(int x){
-        monkis[x].cost = monkis[x].initialCost * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count) / (5000))), monkis[x].count + 1)); // adds a one to make sure that it updates the varible after an update is provided.
+        monkis[x].cost = monkis[x].initialCost * (Math.Pow((1 + (monkis[x].costMultiplier) / (1 + (monkis[x].count) / (1000000000))), monkis[x].count + 1)); // adds a one to make sure that it updates the varible after an update is provided.
         // this goes with the hand cost deduction upgrade, it will not work without this, same with the method below!
     
     }

@@ -37,6 +37,12 @@ public class SaveLoad : MonoBehaviour
 
         
     }
+    // This function is used if you want to load data outside of this class.
+    public void outSideLoad(){
+        
+        IA.load(); // loads the Idle time file.
+        p.load(); // loads the prestige file.
+    }
 
     // Location of persistent files are: C:\Users\Drkon\AppData\LocalLow\MonkiStudios\BananaClickerMobile
 

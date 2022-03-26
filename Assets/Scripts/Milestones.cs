@@ -1109,6 +1109,257 @@ public class Milestones : MonoBehaviour
                 profit = profit * 250;
                 return (profit);
             }
+            if (amount == 10100)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 10200)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 10300)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 10400)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 10500)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 10600)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 10700)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 10800)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 10900)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 11000)
+            {
+                profit = profit * 5;
+                return (profit);
+            }
+            if (amount == 11100)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 11200)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 11300)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 11400)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 11500)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 11600)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 11700)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 11800)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 11900)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 12000)
+            {
+                profit = profit * 5;
+                return (profit);
+            }
+            if (amount == 12100)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 12200)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 12300)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 12400)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 12500)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 12600)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 12700)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 12800)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 12900)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 13000)
+            {
+                profit = profit * 5;
+                return (profit);
+            }
+            if (amount == 13100)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 13200)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 13300)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 13400)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 13500)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 13600)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 13700)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 13800)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 13900)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 14000)
+            {
+                profit = profit * 5;
+                return (profit);
+            }
+            if (amount == 14100)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 14200)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 14300)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 14400)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 14500)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 14600)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 14700)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 14800)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 14900)
+            {
+                profit = profit * 2;
+                return (profit);
+            }
+            if (amount == 15000)
+            {
+                profit = profit * 25;
+                return (profit);
+            }
+            
 
             
             

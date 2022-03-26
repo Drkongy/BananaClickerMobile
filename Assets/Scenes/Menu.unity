@@ -9319,7 +9319,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.18009949, y: -314.29086}
+  m_AnchoredPosition: {x: 0.18011475, y: -314.2909}
   m_SizeDelta: {x: 0, y: 628.582}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1815175790
@@ -9382,7 +9382,11 @@ MonoBehaviour:
 
     Prestige Upgrades - Buy upgrades to enhance you
     banana making experience. Get back to where you was faster. Aswell as gain various
-    boosts.'
+    boosts.
+
+
+    Managers - Buy managers who find and buy monki works so they can
+    make more bananas for you! '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9574,8 +9578,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.13031, y: -3716.4043}
-  m_SizeDelta: {x: 0, y: 7432.8086}
+  m_AnchoredPosition: {x: 2.6826, y: -4679.9233}
+  m_SizeDelta: {x: 0, y: 9359.847}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1956967388
 MonoBehaviour:
@@ -9654,7 +9658,8 @@ MonoBehaviour:
     9450\t    2x\r\n190\t    9500\t    10x\r\n191\t    9550\t    2x\r\n192\t    9600\t   
     2x\r\n193\t    9650\t    2x\r\n194\t    9700\t    2x\r\n195\t    9750\t    5x\r\n196\t   
     9800\t    2x\r\n197\t    9850\t    2x\r\n198\t    9900\t    2x\r\n199\t    9950\t   
-    2x\r\n200\t    10000    250x\nMore to come :D"
+    2x\r\n200\t    10000    250x\n201\t10100\t2x\n202\t10200\t2x\n203\t10300\t2x\n204\t10400\t2x\n205\t10500\t2x\n206\t10600\t2x\n207\t10700\t2x\n208\t10800\t2x\n209\t10900\t2x\n210\t11000\t5x\n211\t11100\t2x\n212\t11200\t2x\n213\t11300\t2x\n214\t11400\t2x\n215\t11500\t2x\n216\t11600\t2x\n217\t11700\t2x\n218\t11800\t2x\n219\t11900\t2x\n220\t12000\t5x\n221\t12100\t2x\n222\t12200\t2x\n223\t12300\t2x\n224\t12400\t2x\n225\t12500\t2x\n226\t12600\t2x\n227\t12700\t2x\n228\t12800\t2x\n229\t12900\t2x\n230\t13000\t5x\n231\t13100\t2x\n232\t13200\t2x\n233\t13300\t2x\n234\t13400\t2x\n235\t13500\t2x\n236\t13600\t2x\n237\t13700\t2x\n238\t13800\t2x\n239\t13900\t2x\n240\t14000\t5x\n241\t14100\t2x\n242\t14200\t2x\n243\t14300\t2x\n244\t14400\t2x\n245\t14500\t2x\n246\t14600\t2x\n247\t14700\t2x\n248\t14800\t2x\n249\t14900\t2x\n250\t15000\t25x\nMore
+    to come :D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9803,8 +9808,11 @@ MonoBehaviour:
     shop\n- Automatically buy 100 of each shops\n- Gain huge money Boosts\n- Increase
     the prestige multiplier\n- nerfed the prestige formula so that it isnt OP\n-
     Fixed huge bug that broke the money of a shops cost past 5000 shops owned\n-
-    Optimized the cpde so it runs faster.\n- UI Tweekings\n- Small changes & bug
-    fixes\n\n"
+    Optimized the code so it runs faster.\n- UI Tweekings\n- Small changes & bug
+    fixes\n\n\nUpdate 1.5 - Managers\n- Added a Managers shop\n- 12 Manager Upgrades
+    for each of the monkeys\n- Automatically gain monkis\n- Prestige multiplier nerfed\n-
+    Fixed visual bug banana upgrades\n- Inceased the milestones to 15000\n- UI Tweekings\n-
+    Small changes & bug fixes\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

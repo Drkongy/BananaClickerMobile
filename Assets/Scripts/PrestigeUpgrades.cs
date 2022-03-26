@@ -15,13 +15,13 @@ public class PrestigeUpgrades : MonoBehaviour
     public BananaPrefix prefix;  //Links the Prefix script to this
     public AmountsLoop AL;   // for the amount multiples
     public Prestige p; // For the prestige script
-    public Milestones miles;
-
+    public Milestones miles; // For the milestones script
+    public Managers managers; // For the managers script
     // save / load Varibles to
     private const string SAVESEPERATOR = ",,,"; // this splits all of the text up so i can save seperate varibles.
     // panel
 
-    public GameObject panel;
+    public GameObject panel; // this is for the panel that shriks 
 
 
     // Main Varibles
@@ -119,7 +119,12 @@ public class PrestigeUpgrades : MonoBehaviour
         upgrText[0].text = "Gain " + prefix.Suffix(gains[0], "0.0", false) + " Bananas";
         p.save();   // saves the prestige data.
         p.txtUpdate();  //updates all of the prestige data.
+        managers.txtIntelligenceUpdate(); // updates the intelligence txt
 
+    }
+
+    public void txtIntelligenceUpdate(){
+        txtIntelligence.text = "Intelligence: " + prefix.Suffix(p.Intelligence, "0.0", false);
     }
 
 
@@ -177,7 +182,7 @@ public class PrestigeUpgrades : MonoBehaviour
         panelSizeUpdate();
         AL.BUUpdate();
     }
-
+    // made this so that the code is cleaner and so that the code is easier to read.
     private void HandOCD(int y){
         for (int i = 0;i <= 99; i++){
             Hand.totalBPC += Hand.Hands[y].HMProduction;

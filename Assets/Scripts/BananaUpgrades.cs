@@ -55,6 +55,12 @@ public class BananaUpgrades : MonoBehaviour
         txtUpgradeCost[2].text = "Cost: " + prefix.Suffix(getHandDeductionCost(UpgradeNo[2]), "0.0", false) + " Bananas";
         txtUpgradeCost[3].text = "Cost: " + prefix.Suffix(getMonkiDeductionCost(UpgradeNo[3]), "0.0", false) + " Bananas";
         txtUpgradeCost[4].text = "Cost: " + prefix.Suffix(getAllCost(UpgradeNo[4]), "0.0", false) + " Bananas";
+
+        for (int i = 0;i <= 4;i++){
+            if(UpgradeNo[i]  == ArrBounds){
+                txtUpgradeCost[i].text = "";
+            }
+        }
         
     }
 
@@ -79,7 +85,7 @@ public class BananaUpgrades : MonoBehaviour
                 UpgradeNo[1]++; 
                 txtUpdate();
                 MonkiMultCheck(UpgradeNo[1]);
-            }
+            }     
         }
     }
 
@@ -93,13 +99,7 @@ public class BananaUpgrades : MonoBehaviour
                 txtUpdate();
                 HandDeductionCheck(UpgradeNo[2]);
             }
-
         }
-        
-        
-
-        
-
     }
     public void btnUpgrMonkisCostDeduction(){
         if(UpgradeNo[3] < ArrBounds){  // makes sure that it does not go out of the array bounds.
@@ -109,12 +109,7 @@ public class BananaUpgrades : MonoBehaviour
                 txtUpdate();
                 MonkiDeductionCheck(UpgradeNo[3]);
             }
-
         }
-     
-
-        
-
     }
 
     public void btnUpgrAll(){
@@ -124,12 +119,10 @@ public class BananaUpgrades : MonoBehaviour
                 UpgradeNo[4]++;
                 txtUpdate();
                 allUpgradesCheck(UpgradeNo[4]);
+                
 
             }
         }
-
-
-
     }
 
 

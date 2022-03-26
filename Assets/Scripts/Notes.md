@@ -9,7 +9,7 @@ Notes:
 
 
 Bugs:
-
+The future updates was not updated. no biggie just do it when ur not lazy.
 
 
 
@@ -26,7 +26,6 @@ Current Progress:
 
 
 Things to do:
-The future updates was not updated. no biggie just do it when ur not lazy.
 
 
 Stats update:
@@ -35,8 +34,8 @@ Add some more stuff into settings
 Add some music
 Add a way to change the main prefix
 
-Achievements update:
-Make achievements that give a new currency that can be spent on cases.
+<!-- Achievements update:           // do this if you feel like it, Not optional.
+Make achievements that give a new currency that can be spent on cases. -->
 
 Database update:
 Make a data base for all the users that play

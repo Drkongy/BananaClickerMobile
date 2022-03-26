@@ -5644,17 +5644,60 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Managers update\n\r- Add managers shop which allow you to buy a manager
-    for each of the Stalls\n- Autobuys stalls. \n- Upgrade the manager so you can
-    buy more stalls.\n\nDatabase update:\r\n- Make a data base for all the users
-    that play\r\n- make an id of them\r\n- make a leaderboard of top Bananas\r\n-
-    setup anti-cheat\n\r\n\r\nStats update:\r\n- Make a stats tab that records all
-    of the players Stats\r\n- Add customized settings\n- Add some music\r\n- Add
-    a way to change the main prefix\n\nUI revamp Update:\r\n- Revamp the entire ui,
-    make it look 10x cleaner\r\n- add small animations to make it looks more lively\r\n-
-    different image for items that player can't afford.\n\r\ncase update:\r\n\r\n-
-    Make a case tab\n- Make some cool items / clothing that give a global multiplier\n-
-    make cases which can be bought with a new currency!"
+  m_text: 'Stats update:
+
+    - Make a stats tab that records all of the players
+    Stats
+
+    - Add customized settings
+
+    - Add some music
+
+    - Add a way
+    to change the main prefix
+
+
+    Porting BananaClicker so it can work on both
+    IOS and Android
+
+
+    Database update:
+
+    - Make a data base for all the users
+    that play
+
+    - make an id of them
+
+    - make a leaderboard of top Bananas
+
+    -
+    setup anti-cheat
+
+    
+
+    
+
+    UI revamp Update:
+
+    - Revamp the entire
+    ui, make it look 10x cleaner
+
+    - add small animations to make it looks more
+    lively
+
+    - different image for items that player can''t afford.
+
+    
+
+    case
+    update:
+
+    - Make a case tab
+
+    - Make some cool items / clothing that give
+    a global multiplier
+
+    - make cases which can be bought with a new currency!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9578,7 +9621,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.6826, y: -4679.9233}
+  m_AnchoredPosition: {x: 2.6825867, y: -4679.923}
   m_SizeDelta: {x: 0, y: 9359.847}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1956967388
@@ -9808,11 +9851,11 @@ MonoBehaviour:
     shop\n- Automatically buy 100 of each shops\n- Gain huge money Boosts\n- Increase
     the prestige multiplier\n- nerfed the prestige formula so that it isnt OP\n-
     Fixed huge bug that broke the money of a shops cost past 5000 shops owned\n-
-    Optimized the code so it runs faster.\n- UI Tweekings\n- Small changes & bug
-    fixes\n\n\nUpdate 1.5 - Managers\n- Added a Managers shop\n- 12 Manager Upgrades
-    for each of the monkeys\n- Automatically gain monkis\n- Prestige multiplier nerfed\n-
-    Fixed visual bug banana upgrades\n- Inceased the milestones to 15000\n- UI Tweekings\n-
-    Small changes & bug fixes\n\n"
+    Optimized the code so it runs faster.\n- New game icon.\n- UI Tweekings\n- Small
+    changes & bug fixes\n\n\nUpdate 1.5 - Managers\n- Added a Managers shop\n- 12
+    Manager Upgrades for each of the monkeys\n- Automatically gain monkis\n- Prestige
+    multiplier nerfed\n- Fixed visual bug banana upgrades\n- Inceased the milestones
+    to 15000\n- UI Tweekings\n- Small changes & bug fixes\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
